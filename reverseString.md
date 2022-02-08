@@ -1,25 +1,3 @@
-<h1 align="center"><project-name></h1>
-
-<p align="center"><project-description></p>
-
-## Links
-
-- [Repo](https://github.com/Rohit19060/<project-name> "<project-name> Repo")
-
-- [Live](<Homepage url> "Live View")
-
-- [Bugs](https://github.com/Rohit19060/<project-name>/issues "Issues Page")
-
-- [API](<API Link> "API")
-
-## Screenshots
-
-![Home Page](/screenshots/1.png "Home Page")
-
-![](/screenshots/2.png)
-
-![](/screenshots/3.png)
-
 ## Available Commands
 
 In the project directory, you can run:
@@ -94,15 +72,15 @@ Give a ⭐️ if you like this project!
 
 ## Example 1:
 
-`Input: s = ["h","e","l","l","o"]`
-`Output: ["o","l","l","e","h"]`
+### `Input: s = ["h","e","l","l","o"]`
+### `Output: ["o","l","l","e","h"]`
 
 ## Example 2:
 
-`Input: s = ["H","a","n","n","a","h"]`
-`Output: ["h","a","n","n","a","H"]`
+### `Input: s = ["H","a","n","n","a","h"]`
+### `Output: ["h","a","n","n","a","H"]`
 
 ### Constraints:
 
-#### 1 <= s.length <= 105
-#### s[i] is a printable ascii character.
+1.  1 <= s.length <= 105
+2.  s[i] is a printable ascii character.
