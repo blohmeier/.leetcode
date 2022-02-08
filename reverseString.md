@@ -95,15 +95,14 @@ Give a ⭐️ if you like this project!
 ## Example 1:
 
 `Input: s = ["h","e","l","l","o"]`
-Output: ["o","l","l","e","h"]
+`Output: ["o","l","l","e","h"]`
 
 ## Example 2:
 
-Input: s = ["H","a","n","n","a","h"]
-Output: ["h","a","n","n","a","H"]
- 
+`Input: s = ["H","a","n","n","a","h"]`
+`Output: ["h","a","n","n","a","H"]`
 
-Constraints:
+### Constraints:
 
-1 <= s.length <= 105
-s[i] is a printable ascii character.
+#### 1 <= s.length <= 105
+#### s[i] is a printable ascii character.
