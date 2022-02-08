@@ -88,28 +88,11 @@ Give a ⭐️ if you like this project!
 2.  Green
 3.  Blue
 
-- [x] Finish my changes
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
 
-| Left-aligned | Center-aligned | Right-aligned |
-| :----------- | :------------: | ------------: |
-| git status   |   git status   |    git status |
-| git diff     |    git diff    |      git diff |
+#344. Reverse String
+>Write a function that reverses a string. The input string is given as an array of characters s. You must do this by modifying the input array in-place with O(1) extra memory.
 
-Hidden trick:
-![alt text][id]
-[id]: /path/to/img.jpg "Title"
-
-
-344. Reverse String
-Write a function that reverses a string. The input string is given as an array of characters s.
-
-You must do this by modifying the input array in-place with O(1) extra memory.
-
- 
-
-Example 1:
+##Example 1:
 
 Input: s = ["h","e","l","l","o"]
 Output: ["o","l","l","e","h"]
