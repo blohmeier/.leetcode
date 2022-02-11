@@ -30,8 +30,18 @@ You must write an algorithm with O(log n) runtime complexity.*/
 function binarySearch(nums, target) {
     let lp = 0;
     let rp = nums.length - 1;
-    while (l <= r) {
+    while (lp <= rp) {
         let middle = Math.floor((lp + rp)/2);
+        if (nums[middle] < target) {
+            lp = middle + 1;
+        } else if (nums[middle] > target) {
+            rp = middle - 1;
+        } else {
+            return middle
+        }
 
     }
+    return -1;
 }
+console.log(binarySearch([-1,0,3,5,9,12], 9));
+console.log(binarySearch([-1,0,3,5,9,12], 2));
