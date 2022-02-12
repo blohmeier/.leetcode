@@ -18,3 +18,22 @@ Constraints:
 The number of nodes in both trees is in the range [0, 2000].
 -104 <= Node.val <= 104
 */
+// Solution 1 - not working
+function TreeNode(val, left, right) {
+    this.val = (val===undefined ? 0 : val)
+    this.left = (left===undefined ? null : left)
+    this.right = (right===undefined ? null : right)
+}
+
+@param {TreeNode} root1
+@param {TreeNode} root2
+@return {TreeNode}
+
+function mergeTrees (root1, root2) {
+    if (!root1 && !root2) return null;
+    const root = new TreeNode(((root1 || 0).val || 0) + ((root2 || 0).val || 0));
+    root.left = mergeTrees(root1 && root1.left, root2 && root2.left);
+    root.right = mergeTrees(root1 && root1.right, root2 && root2.right);
+    return root;
+};
+console.log(mergeTrees([1,3,2,5], [2,1,3,null,4,null,7]));
