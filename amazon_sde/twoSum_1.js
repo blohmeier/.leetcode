@@ -22,3 +22,14 @@
 //-109 <= nums[i] <= 109
 //-109 <= target <= 109
 //Only one valid answer exists.
+function twoSum(nums, target) {
+    for (i = 0; i < nums.length; i++) {
+        for (j = i + 1; j < nums.length; j++) {
+            if (nums[j] == target - nums[i]) {
+                return [i, j];
+            }
+        }
+    }
+    return null;
+}
+console.log(twoSum([2,7,11,15],9));
