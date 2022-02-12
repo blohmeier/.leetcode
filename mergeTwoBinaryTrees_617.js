@@ -19,21 +19,42 @@ The number of nodes in both trees is in the range [0, 2000].
 -104 <= Node.val <= 104
 */
 // Solution 1 - not working
-function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val)
-    this.left = (left===undefined ? null : left)
-    this.right = (right===undefined ? null : right)
-}
+// function TreeNode(val, left, right) {
+//     this.val = (val===undefined ? 0 : val)
+//     this.left = (left===undefined ? null : left)
+//     this.right = (right===undefined ? null : right)
+// }
+//
+// @param {TreeNode} root1
+// @param {TreeNode} root2
+// @return {TreeNode}
+//
+// function mergeTrees (root1, root2) {
+//     if (!root1 && !root2) return null;
+//     const root = new TreeNode(((root1 || 0).val || 0) + ((root2 || 0).val || 0));
+//     root.left = mergeTrees(root1 && root1.left, root2 && root2.left);
+//     root.right = mergeTrees(root1 && root1.right, root2 && root2.right);
+//     return root;
+// };
+// Solution 2 - working
+// using t1 as storage and adding values of t2
+var mergeTrees = function(t1, t2) {
+    // if t1 is empty return t2 (means append t2 in t1)
+    if(!t1) return t2;
 
-@param {TreeNode} root1
-@param {TreeNode} root2
-@return {TreeNode}
+    // if t2 is empty return t1 (means append t1 in t1)
+    if(!t2) return t1;
 
-function mergeTrees (root1, root2) {
-    if (!root1 && !root2) return null;
-    const root = new TreeNode(((root1 || 0).val || 0) + ((root2 || 0).val || 0));
-    root.left = mergeTrees(root1 && root1.left, root2 && root2.left);
-    root.right = mergeTrees(root1 && root1.right, root2 && root2.right);
-    return root;
+    // if both node has value, add them and assign into t1
+    if(t1 && t2) t1.val = t1.val + t2.val;
+
+    // visit left branch
+    t1.left = mergeTrees(t1.left, t2.left);
+
+    // visit right branch
+    t1.right = mergeTrees(t1.right, t2.right);
+
+    // all recursion is done, return t1
+    return t1;
 };
 console.log(mergeTrees([1,3,2,5], [2,1,3,null,4,null,7]));
