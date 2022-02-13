@@ -60,11 +60,24 @@ Constraints:
 0 <= s.length <= 200
 s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
  */
-//First effort: uses standard lib. Easy button:
+// //First effort: uses standard lib. Easy button:
+// var myAtoi = function(str) {
+//     return Math.max(Math.min(parseInt(str) || 0, 2147483647), -2147483648)
+// };
+// console.log(myAtoi("4193 with words"));
+// console.log(myAtoi("   -42"));
+// console.log(myAtoi("42"));
+//Second effort:
 var myAtoi = function(str) {
-    return Math.max(Math.min(parseInt(str) || 0, 2147483647), -2147483648)
+    let i=0, sign = 1, num = 0, MIN = -2147483648, MAX = 2147483647;
+    str = str.trim();
+    if (str[i]=='-' || str[i]=='+') sign = str[i++]=='-'?-1:1;
+    while (str[i] && str[i].charCodeAt(0)-48 <= 9 && str[i].charCodeAt(0)-48 >= 0) {
+        num = num*10 + (str[i++].charCodeAt(0)-48);
+    }
+    num = sign*num;
+    return num<=MIN?MIN:num>=MAX?MAX:num;
 };
 console.log(myAtoi("4193 with words"));
 console.log(myAtoi("   -42"));
 console.log(myAtoi("42"));
-//Second effort:
