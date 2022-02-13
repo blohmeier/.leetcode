@@ -39,7 +39,7 @@ function fib2test(el, cache = []) {
     if (el === 1) return 1;
     if (cache[el]) return cache[el];
 
-    cache[el] = fib2(el - 2, cache) + fib2(el - 1, cache);
+    cache[el] = fib2test(el - 2, cache) + fib2test(el - 1, cache);
     return cache[el];
 }
 function fib2(){
