@@ -56,7 +56,7 @@ function binet(n){
 }
 function fib3(){
     for (let i = 1; i <=50; i++) {
-
+        console.log("Fibonacci sequence number " + i + " is: " + binet(i));
     }
 }
 fib3();
