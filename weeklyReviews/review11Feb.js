@@ -23,7 +23,7 @@
 // }
 // primeGenerator ();
 
-//output the first 50 numbers in the fibonacci sequence
+//output the first 50 numbers in the fibonacci sequence 3 ways: Class answer, Recursive w/Memoizationo, Binet's formula.
 function fib1() {
     let n1 = 0, n2 = 1, nextFib;
     for (i=1; i<=50; i++) {
