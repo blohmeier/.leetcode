@@ -60,3 +60,11 @@ Constraints:
 0 <= s.length <= 200
 s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
  */
+//First effort: uses standard lib. Easy button:
+var myAtoi = function(str) {
+    return Math.max(Math.min(parseInt(str) || 0, 2147483647), -2147483648)
+};
+console.log(myAtoi("4193 with words"));
+console.log(myAtoi("   -42"));
+console.log(myAtoi("42"));
+//Second effort:
