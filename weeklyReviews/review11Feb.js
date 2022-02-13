@@ -51,9 +51,12 @@
 // }
 // fib2();
 // Third Approach:
+function binet(n){
+    return Math.round((Math.pow((1 + Math.sqrt(5))/2,n) - Math.pow((1 - Math.sqrt(5))/2,n))/Math.sqrt(5));
+}
 function fib3(){
     for (let i = 1; i <=50; i++) {
-        return Math.round((Math.pow((1 + Math.sqrt(5))/2,n) - Math.pow((1 - Math.sqrt(5))/2,n))/Math.sqrt(5));
+
     }
 }
 fib3();
