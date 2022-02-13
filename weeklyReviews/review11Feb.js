@@ -24,9 +24,16 @@
 // primeGenerator ();
 
 //output the first 50 numbers in the fibonacci sequence
-function fibGenerator() {
-    for (i=1; i>=50; i++)
+function fib1() {
+    let n1 = 0, n2 = 1, nextFib;
+    for (i=1; i<=50; i++) {
+        console.log("Fibonacci sequence number " + i + " is: " + n1);
+        nextFib = n1 + n2;
+        n1 = n2;
+        n2 = nextFib;
+    }
 }
+fib1();
 // /*704. Binary Search: Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
 // You must write an algorithm with O(log n) runtime complexity.*/
 // function binarySearch(nums, target) {
