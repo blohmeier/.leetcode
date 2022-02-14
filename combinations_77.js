@@ -44,3 +44,4 @@ function comb(max, n, out=[], curr = [], index = 1){
         return out;
     }
 }
+console.log(combine(4,2));
