@@ -42,6 +42,17 @@ var isValid = function(s) {
 
     return stack.length === 0;
 };
+/*
+Explanation of above:
+to verify input s = "{[]}":
+Iterate over all input chars.
+IF open bracket, push it to temp array
+- 1. iteration: stack = "}"
+- 2. iteration: stack = "}]"
+ELSE (i.e., closed bracket) use "pop" to get the last element from the stack and check if it is counterpart of current char.
+- 3. iteration: stack = "}" AND "]" (pop()) matches "]" (current char)
+So, build parallel structure which then has to be a mirror of the "other half" of the "pair" they're presented in.
+ */
 console.log(isValid("()")); // true
-console.log(isValid("()")); // true
+console.log(isValid("()[]{}")); // true
 console.log(isValid("(]")); // false
