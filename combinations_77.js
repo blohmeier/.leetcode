@@ -25,3 +25,22 @@ Constraints:
 1 <= n <= 20
 1 <= k <= n
  */
+var combine = function(n, k) {
+    let out = comb(k, n);
+    // console.log(out);
+    return out;
+};
+
+
+function comb(max, n, out=[], curr = [], index = 1){
+    if(curr.length===max){
+        out.push(curr);
+        return [];
+    }
+    else{
+        while(index<=n){
+            comb(max, n, out, [...curr, index], ++index);
+        }
+        return out;
+    }
+}
