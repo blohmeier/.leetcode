@@ -42,26 +42,27 @@ var rob = function(nums) {
 
 	Trick: At index [i], you only need to know the maximum profit at [i - 1] and [i - 2]. This is a slight variation on fibonacci.
     */
+    //start of 'further breakdown' edits. From: [EASY TO READ] Javascript, O(n) time, O(1) space, Iterative
 
     // Edge case: If the length is 1, return the element at the first index
     if (nums.length === 1) return nums[0];
 
-// Edge case: If the length is 2, return the greater of the two values
+    // Edge case: If the length is 2, return the greater of the two values
     if (nums.length === 2) return Math.max(nums[0], nums[1]);
 
 
-// -------------------------------------------------------------------
+    // -------------------------------------------------------------------
 
-// Example 1: nums = [1, 2, 3, 1, 2]
+    // Example 1: nums = [1, 2, 3, 1, 2]
 
     let maxAtTwoBefore = nums[0]; // 1
 
-//        2                      1         2
+    //        2                      1         2
     let maxAtOneBefore = Math.max(nums[0], nums[1]);
 
     for (let i = 2; i < nums.length; i++) {
 
-// interation 1
+    // interation 1
 
         //         4                  nums[2] = 3 + 1 = 4              2
         const maxAtCurrent = Math.max(nums[i] + maxAtTwoBefore, maxAtOneBefore);
@@ -86,7 +87,7 @@ var rob = function(nums) {
         // maxAtOneBefore = maxAtCurrent;   6
     }
 
-    // ------------------------------------------
+        // ------------------------------------------
 
 
 // Example 2: nums = [1, 3, 1, 3, 1]
@@ -100,27 +101,27 @@ var rob = function(nums) {
 // for (let i = 2; i < nums.length; i++) {
     // interation 1
 
-    //            3                  nums[2] = 1 + 1 = 2              3
-    // const maxAtCurrent = Math.max(nums[i] + maxAtTwoBefore, maxAtOneBefore);
+        //            3                  nums[2] = 1 + 1 = 2              3
+        // const maxAtCurrent = Math.max(nums[i] + maxAtTwoBefore, maxAtOneBefore);
 
-    // maxAtTwoBefore = maxAtOneBefore;  3
-    // maxAtOneBefore = maxAtCurrent;   3
+        // maxAtTwoBefore = maxAtOneBefore;  3
+        // maxAtOneBefore = maxAtCurrent;   3
 
     // interation 2
 
-    //            6                  nums[3] = 3 + 3 = 6              3
-    // const maxAtCurrent = Math.max(nums[i] + maxAtTwoBefore, maxAtOneBefore);
+        //            6                  nums[3] = 3 + 3 = 6              3
+        // const maxAtCurrent = Math.max(nums[i] + maxAtTwoBefore, maxAtOneBefore);
 
-    // maxAtTwoBefore = maxAtOneBefore;   3
-    // maxAtOneBefore = maxAtCurrent;   6
+        // maxAtTwoBefore = maxAtOneBefore;   3
+        // maxAtOneBefore = maxAtCurrent;   6
 
     // interation 3
 
-    //            6                  nums[4] = 1 + 3 = 4              6
-    // const maxAtCurrent = Math.max(nums[i] + maxAtTwoBefore, maxAtOneBefore);
+        //            6                  nums[4] = 1 + 3 = 4              6
+        // const maxAtCurrent = Math.max(nums[i] + maxAtTwoBefore, maxAtOneBefore);
 
-    // maxAtTwoBefore = maxAtOneBefore;  6
-    // maxAtOneBefore = maxAtCurrent;  6
+        // maxAtTwoBefore = maxAtOneBefore;  6
+        // maxAtOneBefore = maxAtCurrent;  6
 // }
 
     return maxAtOneBefore;
