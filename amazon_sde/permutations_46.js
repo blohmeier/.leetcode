@@ -19,7 +19,7 @@ Constraints:
 All the integers of nums are unique.
  */
 //Old effort
-var permute = function(nums) {
+/*var permute = function(nums) {
     let res = [];
     dfs(nums, new Set(), res);
     return res;
@@ -35,7 +35,8 @@ function dfs(nums, curr, res) {
         dfs(nums, curr, res);
         curr.delete(nums[i]);
     }
-}
+}*/
+//New Effort
 var permute = function(letters) {
     let res = [];
     dfs(letters, [], Array(letters.length).fill(false), res);
@@ -44,7 +45,7 @@ var permute = function(letters) {
 
 function dfs(letters, path, used, res) {
     if (path.length == letters.length) {
-        // make a deep copy since otherwise we'd be append the same list over and over
+        // make a deep copy since otherwise we'd append the same list over and over
         res.push(Array.from(path));
         return;
     }
@@ -60,3 +61,4 @@ function dfs(letters, path, used, res) {
         used[i] = false;
     }
 }
+console.log(permute([1,2,3]));
