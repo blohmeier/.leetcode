@@ -83,6 +83,7 @@ Basically we need to check three things:
 Are there duplicates in each row? If yes, return false
 Are there duplicates in each column? If yes, return false
 Are there duplicates in each 3x3 box? If yes, return false
+
 if everything passes, return true at the end.
 
 When dealing with checking for duplicates, we use a Hash Set.
@@ -92,19 +93,19 @@ Let's deal with rows and columns first because it's easier to tackle:
 
 for (let i = 0; i < 9; i++) {
 	let row = new Set(); /!* row Set *!/
-let col = new Set(); /!* column Set *!/
-for(let j = 0; j < 9; j++) {
-    board[i][j] /!* iterating row by row *!/
-    board[j][i] /!* iterating column by column *!/
-}
+    let col = new Set(); /!* column Set *!/
+    for(let j = 0; j < 9; j++) {
+        board[i][j] /!* iterating row by row *!/
+        board[j][i] /!* iterating column by column *!/
+    }
 }
 So as we go through each row/column we add unseen number to the row/column Set accordingly. If Set has seen it, we return false.
-
-    /!* example *!/
-    if (item != '.') {
+/!* example *!/
+if (item != '.') {
     if (row.has(item)) return false;
     row.add(item);
 }
+
 Now let's ace the 3x3 box iterating inside the same loop:
 This is a illustration of a sudoku in nine 3x3 boxes with each cell represented by a two-digit number ij (i means row index and j means column index).
 
@@ -112,31 +113,32 @@ This is a illustration of a sudoku in nine 3x3 boxes with each cell represented 
 10 11 12 | 13 14 15 | 16 17 18  // i = 0, 1, 2
 20 21 22 | 23 24 25 | 26 27 28
 ------------------------------
-    30 31 32 | 33 34 35 | 36 37 38
+30 31 32 | 33 34 35 | 36 37 38
 40 41 42 | 43 44 45 | 46 47 48  // i = 3, 4, 5
 50 51 52 | 53 54 55 | 56 57 58
 ------------------------------
-    60 61 62 | 63 64 65 | 66 67 68
+60 61 62 | 63 64 65 | 66 67 68
 70 71 72 | 73 74 75 | 76 77 78  // i = 6, 7, 8
 80 81 82 | 83 84 85 | 86 87 88
+
 How do we iterate using i, j, and 3(because its 3x3)?
-    We use / and % to help!
+We use / and % to help!
 
-    Because we only want to start vertical traversal when horizontal traversal is done.
+Because we only want to start vertical traversal when horizontal traversal is done.
 
-    Use / for vertical traversal because
+Use / for vertical traversal because
 Math.floor(0 / 3) = 0
 Math.floor(1 / 3) = 0
 Math.floor(2 / 3) = 0
 
-Use % for horizontal traversal beause
+Use % for horizontal traversal because
 0 % 3 = 0
 1 % 3 = 1
 2 % 3 = 2
-We can represent the 3x3 box as:
 
-    for (let i = 0; i < 9; i++) {
-        for(let j = 0; j < 9; j++) {
-            board[3 * Math.floor(i/3) + Math.floor(j/3)][3 * i%3 + j%3]
-        }
-    }*/
+We can represent the 3x3 box as:
+for (let i = 0; i < 9; i++) {
+    for(let j = 0; j < 9; j++) {
+        board[3 * Math.floor(i/3) + Math.floor(j/3)][3 * i%3 + j%3]
+    }
+}*/
