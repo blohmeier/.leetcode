@@ -20,7 +20,7 @@ intervals[i].length == 2
 0 <= start_sub_i <= end_sub_i <= 104
  */
 //Effort 1
-var merge = function(intervals) {
+/*var merge = function(intervals) {
     if(!intervals.length) return [];
     intervals.sort((a, b) => a[0] - b[0]);
 
@@ -33,5 +33,21 @@ var merge = function(intervals) {
         } else result.push([start, end]);
     }
     return result;
+};*/
+//Effort 2
+var merge = function (intervals) {
+    intervals.sort(([a], [c]) => a - c);
+
+    let i = 1;
+
+    while (i < intervals.length) {
+        const [a, b] = intervals[i - 1];
+        const [c, d] = intervals[i];
+
+        if (b >= c) intervals.splice(i - 1, 2, [a, Math.max(b, d)]);
+        else i++;
+    }
+
+    return intervals;
 };
 console.log(merge([[1,3],[2,6],[8,10],[15,18]]));
