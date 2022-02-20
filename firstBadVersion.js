@@ -32,7 +32,7 @@ Constraints:
  */
 
 /**
- * @param {function} isBadVersion()
+ * @param {number} isBadVersion()
  * @return {function}
  */
 var solution = function(isBadVersion) {
@@ -53,4 +53,4 @@ var solution = function(isBadVersion) {
         return left;
     };
 };
-console.log(function(5));
+console.log(solution(5));
