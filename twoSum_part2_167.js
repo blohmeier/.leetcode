@@ -28,7 +28,7 @@ numbers is sorted in non-decreasing order.
 The tests are generated such that there is exactly one solution.*/
 
 //Effort 1
-let twoSum = (nums, target) => {
+/*let twoSum = (nums, target) => {
     let lo = 0,
         hi = nums.length - 1
     while (nums[lo] + nums[hi] !== target) {
@@ -42,36 +42,22 @@ let twoSum = (nums, target) => {
 }
 console.log(twoSum([2,7,11,15],9));
 console.log(twoSum([2,3,4], 6));
-console.log(twoSum([-1,0], -1));
+console.log(twoSum([-1,0], -1));*/
 
-//Attempt 3 - working
-// var twoSum = function(nums, target) {
-//     //nums = nums.sort();
-//     let lo = 0, hi = nums.length;
-//     while (lo < hi) {
-//         if (nums[lo] + nums[hi] == target) {
-//             return [lo+1, hi+1]
-//         } else if (nums[lo] + nums[hi] < target) {
-//             lo++;
-//         } else {
-//             hi--;
-//         }
-//     }
-// }
+//Effort 2
+var twoSum = function(nums, target) {
+    //nums = nums.sort();
+    let lo = 0, hi = nums.length;
+    while (lo < hi) {
+        if (nums[lo] + nums[hi] == target) {
+            return [lo+1, hi+1]
+        } else if (nums[lo] + nums[hi] < target) {
+            lo++;
+        } else {
+            hi--;
+        }
+    }
+}
 console.log(twoSum([2,7,11,15],9));
 console.log(twoSum([2,3,4], 6));
 console.log(twoSum([-1,0], -1));
-
-//Attempt 4 - actually works for "1. Two Sum."
-// function twoSum(nums, target) {
-//     for (i = 0; i < nums.length; i++) {
-//         for (j = i + 1; j < nums.length; j++) {
-//             if (nums[j] == target - nums[i]) {
-//                 return [ i, j ];
-//             }
-//         }
-//     }
-//     return null;
-// }
-// //twoSum([2,7,11,15],9);
-// twoSum([3,2,4], 6);
