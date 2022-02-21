@@ -35,7 +35,7 @@ intervals[i].length == 2
     return result;
 };*/
 //Effort 2
-var merge = function (intervals) {
+/*var merge = function (intervals) {
     intervals.sort(([a], [c]) => a - c);
 
     let i = 1;
@@ -49,5 +49,7 @@ var merge = function (intervals) {
     }
 
     return intervals;
-};
+};*/
+//Effort 3
+
 console.log(merge([[1,3],[2,6],[8,10],[15,18]]));

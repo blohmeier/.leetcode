@@ -1,5 +1,5 @@
-// //Solution 1: "Javascript 124ms"
-function moveZeroes_283(nums) {
+// //Solution 1: 124ms
+/*function moveZeroes(nums) {
     var pos = 0;
     for (var i = 0; i < nums.length; i++) {
         if (nums[i] !== 0) {
@@ -10,9 +10,9 @@ function moveZeroes_283(nums) {
         nums[i] = 0;
     }
     return nums;
-}
-// //Solution 2: reply to above. Run time 83ms.
-// function moveZeroes_283(nums) {
+}*/
+// //Second Effort: 83ms.
+// function moveZeroes(nums) {
 //     let pointer = 0
 //     for (let i in nums){
 //         if (nums[i] !== 0){
@@ -22,7 +22,7 @@ function moveZeroes_283(nums) {
 //     }
 //     return nums
 // }
-//Solution 3: reply to first above. Run time 94ms.
+//Solution 3: 94ms.
 // function moveZeroes_283(nums) {
 //     let count=0;
 //     for(let i=0;i<nums.length;i++){
