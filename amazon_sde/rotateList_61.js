@@ -16,3 +16,16 @@ The number of nodes in the list is in the range [0, 500].
 -100 <= Node.val <= 100
 0 <= k <= 2 * 109
  */
+//First effort - works but functions aren't allowed.
+var rotateRight = function(head, k) {
+    for (let i = 1; i <= k; i++) {
+        console.log(head);
+        //const headConstant = head;
+        let placeHolder = head.pop();
+        console.log(placeHolder);
+        head.unshift(placeHolder);
+    }
+    return head;
+};
+//console.log(rotateRight([1,2,3,4,5],2)); //[4,5,1,2,3]
+console.log(rotateRight([0,1,2],4)) //[2,0,1]
