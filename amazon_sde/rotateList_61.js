@@ -32,8 +32,8 @@ var rotateRight = function(head, k) {
 //console.log(rotateRight([0,1,2],4)) //[2,0,1]
 */
 
-//Second effort - works in Leetcode, not in IntelliJ
-/*function ListNode(val, next) {
+//Second effort - works in Leetcode, not in IntelliJ?
+function ListNode(val, next) {
     this.val = (val===undefined ? 0 : val)
     this.next = (next===undefined ? null : next)
     }
@@ -56,10 +56,35 @@ var rotateRight = function(head, k) {
 
     // returning head of rotated list
     return arr[rot + 1];
-};*/
-// console.log(rotateRight([1,2,3,4,5],2)); //[4,5,1,2,3]
-// console.log(rotateRight([0,1,2],4)) //[2,0,1]
-
-//Third Effort - 
+};
 console.log(rotateRight([1,2,3,4,5],2)); //[4,5,1,2,3]
 console.log(rotateRight([0,1,2],4)) //[2,0,1]
+
+//Third Effort -???
+/*const rotateRight = (head, k) =>  {
+    if (k === 0 || !head) return head;
+    let l = 0, count = 0;
+    let left = null, end = null, index = head;
+    while (index) {
+        count++;
+        if (count - l > k) {
+            l++;
+            left = left ? left.next : head;
+        }
+        end = index;
+        index = index.next;
+    }
+
+    if (!left) {
+        k = k % count;
+        return rotateRight(head, k);
+    }
+    else {
+        let newHead = left.next;
+        left.next = null;
+        end.next = head;
+        return newHead;
+    }
+}*/
+// console.log(rotateRight([1,2,3,4,5],2)); //[4,5,1,2,3]
+// console.log(rotateRight([0,1,2],4)) //[2,0,1]
