@@ -24,3 +24,9 @@ n = board[i].length
 1 <= word.length <= 15
 board and word consists of only lowercase and uppercase English letters.
  */
+var exist = function(board, word) {
+
+};
+console.log(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],"ABCCED"));
+console.log(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],"SEE"));
+console.log(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],"ABCB"));
