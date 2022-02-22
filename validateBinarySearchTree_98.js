@@ -29,7 +29,7 @@ The number of nodes in the tree is in the range [1, 104].
 };
 console.log(isValidBST([2,1,3])); //true
 console.log(isValidBST([5,1,4,null,null,3,6])); //false*/
-//#2:
+//#2: Works for first example not second - both examples working in Leetcode.
 var isValidBST = function(root) {
 
     function inOrder(node) {
