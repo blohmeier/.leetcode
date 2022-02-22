@@ -20,12 +20,22 @@ Constraints:
 The number of nodes in the tree is in the range [1, 104].
 -2^31 <= Node.val <= 2^31 - 1
  */
-//#1: Works for first example not second.
-var isValidBST = function(root, min=null, max=null) {
+//#1: Works for first example not second - both examples working in Leetcode.
+/*var isValidBST = function(root, min=null, max=null) {
     if (!root) return true;
     if (min && root.val <= min.val) return false;
     if (max && root.val >= max.val) return false;
     return isValidBST(root.left, min, root) && isValidBST(root.right, root, max);
+};
+console.log(isValidBST([2,1,3])); //true
+console.log(isValidBST([5,1,4,null,null,3,6])); //false*/
+//#2
+var isValidBST = function(root, min = -Infinity, max = Infinity) {
+    if(root === null)
+        return true;
+    if(root.value <= min || root.valueOf() >= max)
+        return false;
+    return isValidBST(root.right, root.val, max) && isValidBST(root.left, min, root.val)
 };
 console.log(isValidBST([2,1,3])); //true
 console.log(isValidBST([5,1,4,null,null,3,6])); //false
