@@ -1,3 +1,18 @@
+/*344. Reverse String
+Write a function that reverses a string. The input string is given as an array of characters s. You must do this by modifying the input array in-place with O(1) extra memory.
+
+Example 1:
+Input: s = ["h","e","l","l","o"]
+Output: ["o","l","l","e","h"]
+
+Example 2:
+Input: s = ["H","a","n","n","a","h"]
+Output: ["h","a","n","n","a","H"]
+
+Constraints:
+    1 <= s.length <= 105
+s[i] is a printable ascii character.*/
+
 //Three ways. None work. Resource: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
 
 // //#1
@@ -33,17 +48,24 @@
 //         [s[a], s[b]] = [s[b], s[a]]
 //     }
 // };
-
+console.log(reverseString('hello'));
+console.log(reverseString("Hannah"));
 //#2 - 2 pointer technique with recursion
 //Time complexity: O(N)
 //Space complexity: O(N)
 
-function reverseString (s) {
+/*function reverseString (s) {
     reverse(0, s.length - 1);
-    function reverse(i, j) {
+    function reverse(i, j, k = 0) {
         if (i >= j) return;
+        console.log("array at " + i + j + " is: " + s[i],s[j]);
         [s[i], s[j]] = [s[j], s[i]];
         reverse(i + 1, j - 1);
+        console.log("array at i: " + i + " and j: " + j + " is now: " + s[j],s[i]);
+        console.log(k);
+        k++;
     }
 };
 console.log(reverseString('hello'));
+console.log(reverseString("Hannah"));*/
+
