@@ -13,7 +13,7 @@ Constraints:
     1 <= s.length <= 105
 s[i] is a printable ascii character.*/
 
-//Three ways. Only #1 doesn't work. Resource: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
+//Three ways. All work. Resource: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
 
 //#1A
 /*function reverseString(s) {
