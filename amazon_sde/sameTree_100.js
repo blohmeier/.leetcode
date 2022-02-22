@@ -21,6 +21,7 @@ Constraints:
 The number of nodes in both trees is in the range [0, 100].
 -104 <= Node.val <= 104
  */
+//#1: Works in leetcode, not here.
 /*var isSameTree = function(p, q) {
     if (!p && !q) return true;
     if (!p || !q || p.val !== q.val) return false;
@@ -29,6 +30,7 @@ The number of nodes in both trees is in the range [0, 100].
 console.log(isSameTree([1,2,3],[1,2,3]));
 console.log(isSameTree([1,2],[1,null,2]));
 console.log(isSameTree([1,2,1],[1,1,2]));*/
+//#2: Works in leetcode and here.
 var isSameTree = function(p, q) {
     return JSON.stringify(p)===JSON.stringify(q)
 };
