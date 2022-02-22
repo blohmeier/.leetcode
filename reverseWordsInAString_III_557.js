@@ -40,9 +40,12 @@ All the words in s are separated by a single space.
         }
     }
     return res + word;
-};*/
+};
+console.log(reverseWords("Let's take LeetCode contest"));
+console.log(reverseWords("God Ding"));*/
 
-//Second attempt (also works)
+//Second attempt (NOT working)
+/*
 function reverseWords (s) {
     reverse(0, s.length - 1);
     function reverse(i, j) {
@@ -52,4 +55,4 @@ function reverseWords (s) {
     }
 };
 console.log(reverseWords("Let's take LeetCode contest"));
-console.log(reverseWords("God Ding"));
+console.log(reverseWords("God Ding"));*/
