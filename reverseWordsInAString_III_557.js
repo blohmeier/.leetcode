@@ -21,7 +21,7 @@ All the words in s are separated by a single space.
  */
 
 //First attempt
-function reverseWords(s) {
+/*function reverseWords(s) {
     let res = '';
     let word = '';
     for (let c of s) {
@@ -40,10 +40,10 @@ function reverseWords(s) {
         }
     }
     return res + word;
-};
+};*/
 
 //Second attempt (also works)
-function reverseString (s) {
+function reverseWords (s) {
     reverse(0, s.length - 1);
     function reverse(i, j) {
         if (i >= j) return;
@@ -52,3 +52,4 @@ function reverseString (s) {
     }
 };
 console.log(reverseWords("Let's take LeetCode contest"));
+console.log(reverseWords("God Ding"));
