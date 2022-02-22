@@ -15,22 +15,24 @@ s[i] is a printable ascii character.*/
 
 //Three ways. Only #3 works. Resource: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
 
-// //#1
+// //#1A
 // function reverseString(s) {
 //     return s.split("").reverse().join("");
 // }
 
-// //#2
-// function reverseString(s) {
-//     var newString = "";
-//     for (var i = s.length - 1; i >= 0; i--) {
-//         newString += s[i];
-//     }
-//     return newString;
-// }
-
-//#3
+//#2A
 function reverseString(s) {
+    var newString = "";
+    for (var i = s.length - 1; i >= 0; i--) {
+        newString += s[i];
+    }
+    return newString;
+}
+console.log(reverseString(["h","e","l","l","o"]));
+console.log(reverseString(["H","a","n","n","a","h"]));
+
+//#3A
+/*function reverseString(s) {
     if (s === "") {
         return "";
     } else {
@@ -38,15 +40,14 @@ function reverseString(s) {
     }
 }
 console.log(reverseString(["h","e","l","l","o"]));
-console.log(reverseString(["H","a","n","n","a","h"]));
+console.log(reverseString(["H","a","n","n","a","h"]));*/
 
 
-//Two more ways
+//B. Two more ways
 
-//#1 - 2 pointer technique with iteration
+//#1B - 2 pointer technique with iteration
 //Time complexity: O(N)
 //Space complexity: O(1)
-
 /*function reverseString(s) {
     for (let [a, b] = [0, s.length - 1]; a < b; a++, b--) {
         [s[a], s[b]] = [s[b], s[a]]
@@ -56,10 +57,9 @@ console.log(reverseString(["H","a","n","n","a","h"]));
 console.log(reverseString(["h","e","l","l","o"]));
 console.log(reverseString(["H","a","n","n","a","h"]));*/
 
-//#2 - 2 pointer technique with recursion
+//#2B - 2 pointer technique with recursion
 //Time complexity: O(N)
 //Space complexity: O(N)
-
 /*function reverseString (s) {
     reverse(0, s.length - 1);
     function reverse(i, j, k = 0) {
