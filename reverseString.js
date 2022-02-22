@@ -16,11 +16,11 @@ s[i] is a printable ascii character.*/
 //Three ways. Only #1 doesn't work. Resource: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
 
 //#1A
-function reverseString(s) {
+/*function reverseString(s) {
     return s.toString().split("").reverse().join("");
 }
 console.log(reverseString(["h","e","l","l","o"]));
-console.log(reverseString(["H","a","n","n","a","h"]));
+console.log(reverseString(["H","a","n","n","a","h"]));*/
 
 //#2A
 /*function reverseString(s) {
