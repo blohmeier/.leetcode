@@ -29,13 +29,20 @@ The number of nodes in the tree is in the range [1, 104].
 };
 console.log(isValidBST([2,1,3])); //true
 console.log(isValidBST([5,1,4,null,null,3,6])); //false*/
-//#2
-var isValidBST = function(root, min = -Infinity, max = Infinity) {
-    if(root === null)
-        return true;
-    if(root.value <= min || root.valueOf() >= max)
-        return false;
-    return isValidBST(root.right, root.val, max) && isValidBST(root.left, min, root.val)
+//#2:
+var isValidBST = function(root) {
+
+    function inOrder(node) {
+        if(!node) return [];
+        return [...inOrder(node.left), node.val, ...inOrder(node.right)]
+    }
+
+    const sortedArr = inOrder(root);
+
+    for(let i = 0; i < sortedArr.length; i++) {
+        if(sortedArr[i+1] <= sortedArr[i]) return false;
+    }
+    return true;
 };
 console.log(isValidBST([2,1,3])); //true
 console.log(isValidBST([5,1,4,null,null,3,6])); //false
