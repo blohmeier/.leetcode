@@ -20,8 +20,8 @@ There is at least one word in s.
 All the words in s are separated by a single space.
  */
 
-//First attempt
-function reverseWords(s) {
+//First attempt - working
+/*function reverseWords(s) {
     let res = '';
     let word = '';
     for (let c of s) {
@@ -42,7 +42,7 @@ function reverseWords(s) {
     return res + word;
 };
 console.log(reverseWords("Let's take LeetCode contest"));
-console.log(reverseWords("God Ding"));
+console.log(reverseWords("God Ding"));*/
 
 //Second attempt (NOT working)
 /*
