@@ -13,7 +13,7 @@ Constraints:
     1 <= s.length <= 105
 s[i] is a printable ascii character.*/
 
-//Three ways. None work. Resource: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
+//Three ways. Only #3 works. Resource: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
 
 // //#1
 // function reverseString(s) {
@@ -30,27 +30,32 @@ s[i] is a printable ascii character.*/
 // }
 
 //#3
-// function reverseString(s) {
-//     if (s === "") {
-//         return "";
-//     } else {
-//         return reverseString(s.substr(1)) + s.charAt(0);
-//     }
-// }
+function reverseString(s) {
+    if (s === "") {
+        return "";
+    } else {
+        return reverseString(s.toString().substring(1)) + s.toString().charAt(0);
+    }
+}
+console.log(reverseString(["h","e","l","l","o"]));
+console.log(reverseString(["H","a","n","n","a","h"]));
+
 
 //Two more ways
+
 //#1 - 2 pointer technique with iteration
 //Time complexity: O(N)
 //Space complexity: O(1)
 
-function reverseString(s) {
+/*function reverseString(s) {
     for (let [a, b] = [0, s.length - 1]; a < b; a++, b--) {
         [s[a], s[b]] = [s[b], s[a]]
     }
     return s;
 };
 console.log(reverseString(["h","e","l","l","o"]));
-console.log(reverseString(["H","a","n","n","a","h"]));
+console.log(reverseString(["H","a","n","n","a","h"]));*/
+
 //#2 - 2 pointer technique with recursion
 //Time complexity: O(N)
 //Space complexity: O(N)
