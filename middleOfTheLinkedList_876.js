@@ -36,24 +36,8 @@ var middleNode = function(head) {
 };
 /*EXAMPLE 1 EXPLAINED:
 middleNode([1,2,3,4,5]);
-Fast pointer (f): two steps for every one from slow (s). s will be at middle when f is at end.
-initial state
-f
-1 -> 2 -> 3 -> 4 -> 5
-s
-
-1st loop
-		  f
-1 -> 2 -> 3 -> 4 -> 5
-     s
-
-2nd loop
-		            f
-1 -> 2 -> 3 -> 4 -> 5
-          s
-
-when f reach end of the linked list, s will be at the middle.
-
-f = fast pointer
-s = slow pointer
+Fast pointer (f) takes two steps for every one from slow (s). s will be at middle when f is at end.
+State 0:            1:s,f-> 2  ->  3  ->  4-> 5
+State 1 (1st loop): 1    -> 2:s->  3:f->  4-> 5
+State 2 (2nd loop): 1    -> 2  ->  3:s->  4-> 5:f
 */
