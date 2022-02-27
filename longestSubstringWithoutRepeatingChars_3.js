@@ -31,25 +31,29 @@ s consists of English letters, digits, symbols and spaces.
 //     }
 //     return result;
 // }
-// const lengthOfLongestSubstring = s => {
-//     // track most recent index of each letter
-//     const map = {};
-//     // track starting index of the current substring
-//     var left = 0;
-//
-//     return s.split('').reduce((max, v, i) => {
-//         // starting index of substring is 1 + (the last index of this letter) to ensure this letter is not counted twice.
-//         left = map[v] >= left ? map[v] + 1 : left;
-//         // updates last recorded index of letter to the most recent index.
-//         map[v] = i;
-//
-//         // indices of current substring is (idx - leftIdx, idx).
-//         // +1 because if your substring starts and ends at index 0, it still has a length of 1.
-//         return Math.max(max, i - left + 1);
-//     }, 0)
-// };
+//Example 2:
+const lengthOfLongestSubstring = s => {
+    // track most recent index of each letter
+    const map = {};
+    // track starting index of the current substring
+    var left = 0;
+
+    return s.split('').reduce((max, v, i) => {
+        // starting index of substring is 1 + (the last index of this letter) to ensure this letter is not counted twice.
+        left = map[v] >= left ? map[v] + 1 : left;
+        // updates last recorded index of letter to the most recent index.
+        map[v] = i;
+
+        // indices of current substring is (idx - leftIdx, idx).
+        // +1 because if your substring starts and ends at index 0, it still has a length of 1.
+        return Math.max(max, i - left + 1);
+    }, 0)
+}
+console.log(lengthOfLongestSubstring("abcabcbb")); //3
+console.log(lengthOfLongestSubstring("bbbbb")); //1
+console.log(lengthOfLongestSubstring("pwwkew")); //3
 //Example 3:
-function lengthOfLongestSubstring(s) {
+/*function lengthOfLongestSubstring(s) {
     let seen = new Set();
     let longest = 0;
     let l = 0;
@@ -62,7 +66,4 @@ function lengthOfLongestSubstring(s) {
         longest = Math.max(longest, r - l + 1);
     }
     return longest;
-};
-console.log(lengthOfLongestSubstring("abcabcbb")); //3
-console.log(lengthOfLongestSubstring("bbbbb")); //1
-console.log(lengthOfLongestSubstring("pwwkew")); //3
+}*/
