@@ -23,16 +23,20 @@ Constraints:
 s consists of English letters, digits, symbols and spaces.
  */
 
-// function lengthOfLongestSubstring (s) {
-//     for (let i = 0; i = s.length; i++) {
-//         if (s[i] !== s[i+1]) {
-//             var result = "" + s[i];
-//         }
-//     }
-//     return result;
-// }
+//Example 1 - not working:
+/*function lengthOfLongestSubstring (s) {
+    for (let i = 0; i = s.length; i++) {
+        if (s[i] !== s[i+1]) {
+            var result = "" + s[i];
+        }
+    }
+    return result;
+}*/
+console.log(lengthOfLongestSubstring("abcabcbb")); //3
+console.log(lengthOfLongestSubstring("bbbbb")); //1
+console.log(lengthOfLongestSubstring("pwwkew")); //3
 //Example 2:
-const lengthOfLongestSubstring = s => {
+/*const lengthOfLongestSubstring = s => {
     // track most recent index of each letter
     const map = {};
     // track starting index of the current substring
@@ -48,10 +52,8 @@ const lengthOfLongestSubstring = s => {
         // +1 because if your substring starts and ends at index 0, it still has a length of 1.
         return Math.max(max, i - left + 1);
     }, 0)
-}
-console.log(lengthOfLongestSubstring("abcabcbb")); //3
-console.log(lengthOfLongestSubstring("bbbbb")); //1
-console.log(lengthOfLongestSubstring("pwwkew")); //3
+}*/
+
 //Example 3:
 /*function lengthOfLongestSubstring(s) {
     let seen = new Set();
