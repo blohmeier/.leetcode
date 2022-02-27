@@ -24,23 +24,19 @@ n == image[i].length
 */
 
 //Example 1:
-function floodFill (image, sr, sc, newColor, firstColor = image[sr][sc]) {
+/*function floodFill (image, sr, sc, newColor, firstColor = image[sr][sc]) {
     // handle if the coordinate is out of bounds
     // or if it is already the new color
     // or if it's not from the original color we're trying to change
-    if (sr < 0 || sc < 0 || sr >= image.length || sc >= image[sr].length || image[sr][sc] !== firstColor || image[sr][sc] === newColor)   {
-        return image; // return image as-is
-    }
-
+    if (sr < 0 || sc < 0 || sr >= image.length || sc >= image[sr].length || image[sr][sc] !== firstColor || image[sr][sc] === newColor)   {return image; // return image as-is
+        }
     image[sr][sc] = newColor;
-
     floodFill(image, sr + 1, sc, newColor, firstColor);
     floodFill(image, sr - 1, sc, newColor, firstColor);
     floodFill(image, sr, sc + 1, newColor, firstColor);
     floodFill(image, sr, sc - 1, newColor, firstColor);
-
     // return modified image
     return image;
-};
+}*/
 console.log(floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2));
 console.log(floodFill([[0,0,0],[0,0,0]], 0, 0, 2));
