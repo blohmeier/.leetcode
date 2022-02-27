@@ -32,9 +32,8 @@ var middleNode = function(head) {
     while (fast && fast.next) {
         fast = fast.next.next;
         slow = slow.next;
-        console.log(slow.next);
+        //console.log(slow.next);
     }
-
     return slow;
 };
 middleNode([1,2,3,4,5]);
