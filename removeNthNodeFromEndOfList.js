@@ -1,4 +1,13 @@
 `use strict`;
+/*
+Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+
+
+Example 1:
+
+
+ */
 //Attempt 1 - not working
 // var removeNthFromEnd = function(head, n) {
 //     let dummy = new ListNode(0);
