@@ -15,7 +15,6 @@ Input: image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, newColor = 2
 Output: [[2,2,2],[2,2,2]]
 
 Constraints:
-
 m == image.length
 n == image[i].length
 1 <= m, n <= 50
@@ -23,6 +22,8 @@ n == image[i].length
 0 <= sr < m
 0 <= sc < n
 */
+
+//Example 1:
 function floodFill (image, sr, sc, newColor, firstColor = image[sr][sc]) {
     // handle if the coordinate is out of bounds
     // or if it is already the new color
