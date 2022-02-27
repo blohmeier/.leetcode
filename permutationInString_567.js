@@ -83,12 +83,11 @@ s1 and s2 consist of lowercase English letters.
 }*/
 
 // Example 2: Example 1 from above, but without comments:
-function checkInclusion (s1, s2) {
+/*function checkInclusion (s1, s2) {
     const expectedFrequencies = {};
     for (let i = 0; i < s1.length; i++) {
         expectedFrequencies[s1[i]] = (expectedFrequencies[s1[i]] || 0) + 1;
     }
-
     const curFrequencies = {};
     let remainingChars = Object.keys(expectedFrequencies).length;
     let l = 0 - (s1.length - 1);
@@ -111,6 +110,6 @@ function checkInclusion (s1, s2) {
         r++;
     }
     return false;
-}
-console.log(checkInclusion("ab","eidbaooo"));
-console.log(checkInclusion("ab","eidboaoo"));
+}*/
+console.log(checkInclusion("ab","eidbaooo")); //true
+console.log(checkInclusion("ab","eidboaoo")); //false
