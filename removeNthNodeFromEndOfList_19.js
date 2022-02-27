@@ -44,8 +44,7 @@ Follow up: Could you do this in one pass?
 // };
 // Attempt 2:
 var removeNthFromEnd = function(head, n) {
-    let fast = head,
-        slow = head
+    let fast = slow = head;
     for (let i = 0; i < n; i++) {
         fast = fast.next;
     }
