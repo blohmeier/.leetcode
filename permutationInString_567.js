@@ -1,4 +1,4 @@
-/*-->
+/*
 567. Permutation in String
 Medium
 
