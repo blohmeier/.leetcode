@@ -27,8 +27,7 @@ The number of nodes in the list is in the range [1, 100].
 // };
 //Attempt 2
 var middleNode = function(head) {
-    let fast = head;
-    let slow = head;
+    let fast = slow = head;
     while (fast && fast.next) {
         fast = fast.next.next;
         slow = slow.next;
