@@ -17,7 +17,8 @@ Constraints:
 s1 and s2 consist of lowercase English letters.
 */
 
-function checkInclusion (s1, s2) {
+//Example 1:
+/*function checkInclusion (s1, s2) {
     // in order to consider a string "x" a permutation of string "y" they must meet 2 metrics:
     //    1) they must have the same length.
     //    2) each character present must have the same amount of occurrences (or "frequency") in both strings.
@@ -79,10 +80,9 @@ function checkInclusion (s1, s2) {
     }
 
     return false;
-};
-console.log(checkInclusion("ab","eidbaooo"));
-console.log(checkInclusion("ab","eidboaoo"));
-// above, without comments:
+}*/
+
+// Example 2: Example 1 from above, but without comments:
 function checkInclusion (s1, s2) {
     const expectedFrequencies = {};
     for (let i = 0; i < s1.length; i++) {
@@ -111,4 +111,6 @@ function checkInclusion (s1, s2) {
         r++;
     }
     return false;
-};
+}
+console.log(checkInclusion("ab","eidbaooo"));
+console.log(checkInclusion("ab","eidboaoo"));
