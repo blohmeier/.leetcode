@@ -24,14 +24,14 @@ The number of nodes in the list is sz.
 
 Follow up: Could you do this in one pass?
  */
-//Attempt 1 - not working
+//Attempt 1 - working
 // var removeNthFromEnd = function(head, n) {
 //     let dummy = new ListNode(0);
 //     dummy.next = head;
 //     let first = dummy;
 //     let second = dummy;
 //     // Advances first pointer so that the gap between first and second is n nodes apart
-//     for (int i = 1; i <= n + 1; i++) {
+//     for (i = 1; i <= n + 1; i++) {
 //         first = first.next;
 //     }
 //     // Move first to the end, maintaining the gap
