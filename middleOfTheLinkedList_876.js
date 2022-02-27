@@ -1,4 +1,23 @@
 `use strict`;
+/*876. Middle of the Linked List
+Easy
+
+4740
+
+116
+
+Add to List
+
+Share
+Given the head of a singly linked list, return the middle node of the linked list.
+
+    If there are two middle nodes, return the second middle node.
+
+
+
+    Example 1:
+
+*/
 //Attempt 1
 // function middleNode(head) {
 //     let A = [head];
