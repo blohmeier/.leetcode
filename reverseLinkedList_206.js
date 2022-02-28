@@ -33,7 +33,7 @@ function reverseList (head) {
     }
     return prev
 }*/
-//Effort 2 - recursive: "Javascript Iterative and Recursive Solution"
+//Effort 2 - recursive: "Javascript Iterative and Recursive Solution" - leetcode: works. Intellij: doesn't.
 function reverseList (head) {
     if (head == null || head.next == null){
         return head;
