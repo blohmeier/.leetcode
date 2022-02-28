@@ -38,7 +38,6 @@ function reverseList (head) {
     }
     return prev
 }
-console.log(reverseList([1,2,3,4,5]));
 //Effort 2 - recursive: "Javascript Iterative and Recursive Solution"
 function reverseList (head) {
     if (head == null || head.next == null){
