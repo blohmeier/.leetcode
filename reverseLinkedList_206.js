@@ -30,7 +30,7 @@ function ListNode(val, next) {
  * @param {ListNode} head
  * @return {ListNode}
  */
-// Effort1:
+// Effort 2:
 function reverseList (head) {
     let [prev, cur] = [null, head]
     while(cur) {
@@ -38,8 +38,8 @@ function reverseList (head) {
     }
     return prev
 }
-//Effort 2 - recursive: "Javascript Iterative and Recursive Solution"
-function reverseList (head) {
+//Effort 3 - recursive: "Javascript Iterative and Recursive Solution"
+/*function reverseList (head) {
     if (head == null || head.next == null){
         return head;
     }
@@ -47,5 +47,5 @@ function reverseList (head) {
     head.next.next = head;
     head.next = null;
     return reversedListHead
-}
+}*/
 console.log(reverseList([1,2,3,4,5]));
