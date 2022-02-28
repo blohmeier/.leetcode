@@ -21,16 +21,11 @@ Constraints:
 The number of nodes in the list is the range [0, 5000].
 -5000 <= Node.val <= 5000
 */
-//Effort 1 - iterative: "Easy [C++/Java/Python/JavaScript] Explained+Animated"
+//Effort 1 - iterative: "Easy [C++/Java/Python/JavaScript] Explained+Animated" - leetcode: works. Intellij: doesn't.
 function ListNode(val, next) {
     this.val = (val===undefined ? 0 : val)
     this.next = (next===undefined ? null : next)
 }
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-// Effort 2:
 function reverseList (head) {
     let [prev, cur] = [null, head]
     while(cur) {
