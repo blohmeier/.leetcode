@@ -44,7 +44,7 @@ function isAlpha(ch){
     return /[a-zA-Z]/i.test(ch)
 }*/
 
-// Effort 2: DP | working
+//Effort 2: DP | working
 /*var letterCasePermutation = function(S) {
     return permut(S);
 };
@@ -96,8 +96,8 @@ function isAlpha(ch){
     return /[a-zA-Z]/i.test(ch)
 }*/
 
-//Cleaned up:
-/*var letterCasePermutation = function(S) {
+//Effort 3: Effort 2 Cleaned up:
+var letterCasePermutation = function(S) {
     let out = []
     for(let i of S){
         if(out.length == 0){
@@ -128,6 +128,6 @@ function attach(out, ch){
 }
 function isAlpha(ch){
     return /[a-zA-Z]/i.test(ch)
-}*/
+}
 console.log(letterCasePermutation("a1b2"));
 console.log(letterCasePermutation("3z4"));
