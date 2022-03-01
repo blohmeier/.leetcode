@@ -44,8 +44,8 @@ function isAlpha(ch){
     return /[a-zA-Z]/i.test(ch)
 }*/
 
-// Effort 2: DP |
-var letterCasePermutation = function(S) {
+// Effort 2: DP | working
+/*var letterCasePermutation = function(S) {
     return permut(S);
 };
 
@@ -94,7 +94,8 @@ function attach(out, ch){
 
 function isAlpha(ch){
     return /[a-zA-Z]/i.test(ch)
-}
+}*/
+
 //Cleaned up:
 /*var letterCasePermutation = function(S) {
     let out = []
