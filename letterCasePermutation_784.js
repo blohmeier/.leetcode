@@ -97,7 +97,7 @@ function isAlpha(ch){
 }*/
 
 //Effort 3: Effort 2 Cleaned up:
-var letterCasePermutation = function(S) {
+/*var letterCasePermutation = function(S) {
     let out = []
     for(let i of S){
         if(out.length == 0){
@@ -128,6 +128,6 @@ function attach(out, ch){
 }
 function isAlpha(ch){
     return /[a-zA-Z]/i.test(ch)
-}
+}*/
 console.log(letterCasePermutation("a1b2"));
 console.log(letterCasePermutation("3z4"));
