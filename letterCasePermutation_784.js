@@ -14,36 +14,35 @@ Constraints:
 1 <= s.length <= 12
 s consists of lowercase English letters, uppercase English letters, and digits.
  */
-//DP, Backtracking both solution | Easy to Unders...
-//#1
 
-// var letterCasePermutation = function(S) {
-//     return permut(S, 0);
-// };
-//
-//
-// function permut(str, pos, out = [], curr= ""){
-//     if(pos===str.length || curr.length===str.length){
-//         out.push(curr);
-//     }
-//     else{
-//         if(isAlpha(str[pos])){
-//             let up = curr + str[pos].toUpperCase();
-//             let low = curr + str[pos].toLowerCase();
-//             permut(str, pos+1, out, up);
-//             permut(str, pos+1, out, low);
-//         }
-//         else{
-//             permut(str, pos+1, out, curr + str[pos]);
-//         }
-//
-//     }
-//     return out;
-// }
-//
-// function isAlpha(ch){
-//     return /[a-zA-Z]/i.test(ch)
-// }
+//Effort 1: DP, Backtracking both solution | Easy to Unders... | working
+var letterCasePermutation = function(S) {
+    return permut(S, 0);
+};
+
+
+function permut(str, pos, out = [], curr= ""){
+    if(pos===str.length || curr.length===str.length){
+        out.push(curr);
+    }
+    else{
+        if(isAlpha(str[pos])){
+            let up = curr + str[pos].toUpperCase();
+            let low = curr + str[pos].toLowerCase();
+            permut(str, pos+1, out, up);
+            permut(str, pos+1, out, low);
+        }
+        else{
+            permut(str, pos+1, out, curr + str[pos]);
+        }
+
+    }
+    return out;
+}
+
+function isAlpha(ch){
+    return /[a-zA-Z]/i.test(ch)
+}
 
 
 // #2: DP solution
@@ -98,7 +97,7 @@ s consists of lowercase English letters, uppercase English letters, and digits.
 //     return /[a-zA-Z]/i.test(ch)
 // }
 //Cleaned up:
-var letterCasePermutation = function(S) {
+/*var letterCasePermutation = function(S) {
     let out = []
     for(let i of S){
         if(out.length == 0){
@@ -129,6 +128,6 @@ function attach(out, ch){
 }
 function isAlpha(ch){
     return /[a-zA-Z]/i.test(ch)
-}
+}*/
 console.log(letterCasePermutation("a1b2"));
 console.log(letterCasePermutation("3z4"));
