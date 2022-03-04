@@ -18,16 +18,17 @@ Total amount you can rob = 2 + 9 + 1 = 12.
 Constraints:
 1 <= nums.length <= 100
 0 <= nums[i] <= 400*/
-//Effort 1
-//variable p records previous 2 max values: p[1] is the previous one and p[0] is the one before previous one. p is initialized as [0,0]. variable n is the value at each position.
+
+//Effort 1 - variable p records previous 2 max values: p[1] is the previous one and p[0] is the one before previous one. p is initialized as [0,0]. variable n is the value at each position.
 var rob = function(nums) {
     return nums.reduce(function(p, n) {
         return [p[1], Math.max(p[0] + n, p[1])];
     }, [0,0])[1];
 }
+
 //Second effort
-var rob = function(nums) {
-    /*
+/*var rob = function(nums) {
+    /!*
     Runtime: 56 ms, faster than 100.00% of JavaScript online submissions for House Robber.
     Memory Usage: 33.8 MB, less than 25.89% of JavaScript online submissions for House Robber.
 
@@ -38,7 +39,7 @@ var rob = function(nums) {
 	- Memoization
 
 	Trick: At index [i], you only need to know the maximum profit at [i - 1] and [i - 2]. This is a slight variation on fibonacci.
-    */
+    *!/
     //start of 'further breakdown' edits. From: [EASY TO READ] Javascript, O(n) time, O(1) space, Iterative
 
     // Edge case: If the length is 1, return the element at the first index
@@ -122,7 +123,7 @@ var rob = function(nums) {
 // }
 
     return maxAtOneBefore;
-};
-console.log(rob([1,2,3,1]));
-console.log(rob([2,7,9,3,1]));
+};*/
+console.log(rob([1,2,3,1])); //4
+console.log(rob([2,7,9,3,1])); //12
 
