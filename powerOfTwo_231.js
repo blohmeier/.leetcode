@@ -18,7 +18,8 @@ Output: false
 Constraints:
 -231 <= n <= 231 - 1
  */
-//Effort 1
+
+//Effort 1 - 88ms
 /*Description: Just a binary trick. Use two rules:
 RULE 1: If 2^n = 1{000...0 - n times}, is binary. EXAMPLES:
 2^2 = 4 (decimial) = 100 binary - two zeros.
@@ -46,8 +47,11 @@ EXAMPLES:
 -- 11001
 -- 11000
 -- 11000 != 0
- */
-let isPowerOfTwo = n => n > 0 ? !(n & n-1) : false;
+*/
+//Code:
+/*let isPowerOfTwo = n => n > 0 ? !(n & n-1) : false;*/
+
+//Effort 2:
 console.log(isPowerOfTwo(1));
 console.log(isPowerOfTwo(16));
 console.log(isPowerOfTwo(3));
