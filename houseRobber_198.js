@@ -19,7 +19,7 @@ Constraints:
 1 <= nums.length <= 100
 0 <= nums[i] <= 400*/
 
-//Effort 1 - variable p records previous 2 max values: p[1] is the previous one and p[0] is the one before previous one. p is initialized as [0,0]. variable n is the value at each position.
+//Effort 1 - 92ms - variable p records previous 2 max values: p[1] is the previous one and p[0] is the one before previous one. p is initialized as [0,0]. variable n is the value at each position.
 var rob = function(nums) {
     return nums.reduce(function(p, n) {
         return [p[1], Math.max(p[0] + n, p[1])];
