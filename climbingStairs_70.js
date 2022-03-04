@@ -1,8 +1,5 @@
-/*
-70. Climbing Stairs
-Easy
-
-You are climbing a staircase. It takes n steps to reach the top.
+//70. Climbing Stairs
+/*You are climbing a staircase. It takes n steps to reach the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 
 Example 1:
@@ -23,6 +20,7 @@ Explanation: There are three ways to climb to the top.
 Constraints:
 1 <= n <= 45
  */
+
 //Effort 1:
 /*var climbStairs = function(n){
     // First two pointers store the first two numbers of the Fibonacci sequence
@@ -76,7 +74,7 @@ since we can either climb 1 or 2 steps
 For more optimised solution, we use an Array to keep track of results that have already been computed
 */
 
-var climbStairs = function(n, memo = new Array()) {
+/*var climbStairs = function(n, memo = new Array()) {
     if (n === 1) {
         return 1;
     }
@@ -91,7 +89,7 @@ var climbStairs = function(n, memo = new Array()) {
     return res;
     // T.C: O(N)
     // S.C: O(N)
-};
+};*/
 //Effort 4
 console.log(climbStairs(2));
 console.log(climbStairs(3));
