@@ -22,7 +22,7 @@ Constraints:
  */
 
 //Effort 1:
-/*var climbStairs = function(n){
+var climbStairs = function(n){
     // First two pointers store the first two numbers of the Fibonacci sequence
     let prev = 0;
     let curr = 1;
@@ -41,7 +41,7 @@ Constraints:
     }
     // Outside of our loop we return curr which stored our cumulative total while we iterated.
     return curr;
-}*/
+}
 //Effort 2:
 /*
 DP
@@ -91,7 +91,7 @@ For more optimised solution, we use an Array to keep track of results that have 
     // S.C: O(N)
 };*/
 //Effort 4
-console.log(climbStairs(2));
-console.log(climbStairs(3));
+console.log(climbStairs(2)); //2
+console.log(climbStairs(3)); //3
 
 
