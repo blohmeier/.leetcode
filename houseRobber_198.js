@@ -125,7 +125,7 @@ Constraints:
     return maxAtOneBefore;
 };*/
 
-//Effort 3 - Effort 2 without comments
+//Effort 3 - Effort 2 without comments - 56ms - 98%, 37%
 var rob = function(nums) {
     if (nums.length === 1) return nums[0];
     if (nums.length === 2) return Math.max(nums[0], nums[1]);

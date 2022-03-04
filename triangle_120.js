@@ -27,3 +27,7 @@ triangle[i].length == triangle[i - 1].length + 1
 
 Follow up: Could you do this using only O(n) extra space, where n is the total number of rows in the triangle?*/
 
+//Effort 1
+/*
+Description
+ */
