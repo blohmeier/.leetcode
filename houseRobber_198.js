@@ -20,13 +20,13 @@ Constraints:
 0 <= nums[i] <= 400*/
 
 //Effort 1 - 92ms - variable p records previous 2 max values: p[1] is the previous one and p[0] is the one before previous one. p is initialized as [0,0]. variable n is the value at each position.
-var rob = function(nums) {
+/*var rob = function(nums) {
     return nums.reduce(function(p, n) {
         return [p[1], Math.max(p[0] + n, p[1])];
     }, [0,0])[1];
-}
+}*/
 
-//Second effort
+//Effort 2
 /*var rob = function(nums) {
     /!*
     Runtime: 56 ms, faster than 100.00% of JavaScript online submissions for House Robber.
@@ -124,6 +124,20 @@ var rob = function(nums) {
 
     return maxAtOneBefore;
 };*/
+
+//Effort 3 - Effort 2 without comments
+var rob = function(nums) {
+    if (nums.length === 1) return nums[0];
+    if (nums.length === 2) return Math.max(nums[0], nums[1]);
+    let maxAtTwoBefore = nums[0];
+    let maxAtOneBefore = Math.max(nums[0], nums[1]);
+    for (let i = 2; i < nums.length; i++) {
+        const maxAtCurrent = Math.max(nums[i] + maxAtTwoBefore, maxAtOneBefore);
+        maxAtTwoBefore = maxAtOneBefore;
+        maxAtOneBefore = maxAtCurrent;
+    }
+    return maxAtOneBefore;
+};
 console.log(rob([1,2,3,1])); //4
 console.log(rob([2,7,9,3,1])); //12
 
