@@ -43,11 +43,11 @@ Constraints:
 }*/
 
 
-//Effort 2 - bst approach?:
+//Effort 2 - 68ms - best approach?:
 /*DP - dp[i] represents the total number of different ways to take i steps. So, we want to get dp[n].
 dp[n] = dp[n-1] + dp[n-2] because we can either take 1 or 2 steps.
 We have two base cases: dp[1] = 1 and dp[2] = 2 because there is one way to take 1 step and there are two ways to take 2 steps (1 step + 1 step OR 2 step)*/
-var climbStairs = function(n) {
+/*var climbStairs = function(n) {
     let dp = new Array(n + 1);
     dp[1] = 1, dp[2] = 2;
     for (let i = 3; i <= n; i++) {
@@ -56,21 +56,13 @@ var climbStairs = function(n) {
     return dp[n];
     // T.C: O(N)
     // S.C: O(N)
-};
+};*/
 
 
-//Effort 3:
-/*
-Recursion
-
-climbStairs(n) returns the total number of different ways of taking n steps.
-Hence, climbStairs(n-1) + climbStairs(n-2) gives the result
-since we can either climb 1 or 2 steps
-
-For more optimised solution, we use an Array to keep track of results that have already been computed
-*/
-
-/*var climbStairs = function(n, memo = new Array()) {
+//Effort 3 - 78ms:
+/*Recursion - climbStairs(n) returns the total number of different ways of taking n steps. Hence, climbStairs(n-1) + climbStairs(n-2) gives the result
+since we can either climb 1 or 2 steps. For a more optimised solution, we use an Array to keep track of results that have already been computed.*/
+var climbStairs = function(n, memo = new Array()) {
     if (n === 1) {
         return 1;
     }
@@ -85,7 +77,7 @@ For more optimised solution, we use an Array to keep track of results that have 
     return res;
     // T.C: O(N)
     // S.C: O(N)
-};*/
+};
 //Effort 4
 console.log(climbStairs(2)); //2
 console.log(climbStairs(3)); //3
