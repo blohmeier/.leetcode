@@ -14,6 +14,16 @@ Explanation: The input binary string 11111111111111111111111111111101 represents
 Constraint: The input must be a binary string of length 32
 Follow up: If this function is called many times, how would you optimize it?
  */
+var reverseBits = function(n) {
+    var result = 0;
+    var count = 32;
 
+    while (count--) {
+        result *= 2;
+        result += n & 1;
+        n = n >> 1;
+    }
+    return result;
+};
 console.log(reverseBits(0o00000010100101000001111010011100)); //964176192
-console.log(reverseBits(0o00000010100101000001111010011100)); //3221225471
+console.log(reverseBits(11111111111111111111111111111101)); //3221225471
