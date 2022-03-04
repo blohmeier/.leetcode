@@ -28,8 +28,8 @@ triangle[i].length == triangle[i - 1].length + 1
 Follow up: Could you do this using only O(n) extra space, where n is the total number of rows in the triangle?*/
 
 //Effort 1
-/*
-Description: Start at the second to last row, then add the smallest element under the current element. Continue till you reach the top.
+//Description:
+/*Start at the second to last row, then add the smallest element under the current element. Continue till you reach the top.
 Example
 Start:
   1
@@ -47,3 +47,12 @@ Step 3: Return triangle[0][0]
 
 Time:  O(elements)
 Space: O(1)*/
+//Code:
+var minimumTotal = function(triangle) {
+    for (let i = triangle.length-2; i >= 0; i--)
+        for (let j = 0; j < triangle[i].length; j++)
+            triangle[i][j] += Math.min(triangle[i+1][j], triangle[i+1][j+1])
+    return triangle[0][0]
+}
+console.log(minimumTotal([[2],[3,4],[6,5,7],[4,1,8,3]])); //11
+console.log(minimumTotal([[-10]])); //-10
