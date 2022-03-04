@@ -16,5 +16,4 @@ Follow up: If this function is called many times, how would you optimize it?
  */
 
 console.log(reverseBits(0o00000010100101000001111010011100)); //964176192
-console.log(reverseBits(0o00000010100101000001111010011100)); //
-console.log(reverseBits(0o00000010100101000001111010011100));
+console.log(reverseBits(0o00000010100101000001111010011100)); //3221225471
