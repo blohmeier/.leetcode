@@ -22,7 +22,7 @@ Constraints:
  */
 
 //Effort 1:
-var climbStairs = function(n){
+/*var climbStairs = function(n){
     // First two pointers store the first two numbers of the Fibonacci sequence
     let prev = 0;
     let curr = 1;
@@ -40,7 +40,7 @@ var climbStairs = function(n){
     }
     // Outside of our loop we return curr which stored our cumulative total while we iterated.
     return curr;
-}
+}*/
 //Effort 2:
 /*
 DP
