@@ -29,5 +29,21 @@ Follow up: Could you do this using only O(n) extra space, where n is the total n
 
 //Effort 1
 /*
-Description
- */
+Description: Start at the second to last row, then add the smallest element under the current element. Continue till you reach the top.
+Example
+Start:
+  1
+ 2 3    <-- Algorithm starts here, at the second to last row
+4 5 6
+Step 1:
+  1
+ 6 8    <-- 2 + min(4, 5) and 3 + min(5, 6)
+4 5 6
+Step 2:
+  7    <-- 1 + min(6, 8)
+ 6 8
+4 5 6
+Step 3: Return triangle[0][0]
+
+Time:  O(elements)
+Space: O(1)*/
