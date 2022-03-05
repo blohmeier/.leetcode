@@ -39,10 +39,10 @@ function searchInsert(nums, target) {
 };
 function binarySearch(array, target, l, r) {
     if (l > r) return l;
-    let m = Math.floor((l + r)/2);
-    if (array[m] === target) return m; //found target
-    if (array[m] > target) return binarySearch(array, target, l, m - 1); //search left side
-    if (array[m] < target) return binarySearch(array, target, m + 1, r); //search right side
+    const m = Math.floor((l + r)/2);
+    if (array[m] === target) return m;
+    if (array[m] > target) return binarySearch(array, target, l, m - 1);
+    if (array[m] < target) return binarySearch(array, target, m + 1, r);
 }
 console.log(searchInsert([1,3,5,6],5)); //2
 console.log(searchInsert([1,3,5,6],2)); //1
