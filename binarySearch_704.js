@@ -21,11 +21,11 @@ Constraints:
 //Effort 1:
 /*var search = function(nums, target) {
     let l = 0;
-    let r = nums.length - 1; //#1 l and r nums pointers for 'while'
-    while (l <= r) {
-        let m = Math.floor((l + r) / 2); // middle of l and r
-        if (nums[m] < target) { // #1
-            l = m + 1;
+    let r = nums.length - 1;
+    while (l <= r) { //#1: Set l and r nums pointers for 'while'.
+        let m = Math.floor((l + r) / 2); //#2: Start m b/t l and r.
+        if (nums[m] < target) {
+            l = m + 1;  // #3: reset l if nums[m] too low.
         } else if (nums[m] > target) { // #2
             r = m - 1;
         } else { // #3
