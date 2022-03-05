@@ -39,9 +39,9 @@ function searchInsert(nums, target) {
 };
 function binarySearch(array, target, l, r) {
     if (l > r) return l;
-    const midPoint = Math.floor((start + end)/2);
-    // found target
-    if (array[midPoint] === target) return midPoint;
+    let m = Math.floor((l + r)/2);
+
+    if (array[m] === target) return m; // found target
     // search the left side
     if (array[midPoint] > target) return binarySearch(array, target, start, midPoint - 1);
     // search the right side
