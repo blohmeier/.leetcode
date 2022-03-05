@@ -57,6 +57,8 @@ Constraints:
         } else { return m }
     } return -1
 }*/
+//Effort 4: Effort 1 with console output:
+
 console.log(search([-1,0,3,5,9,12],9)); //4
 console.log(search([-1,0,3,5,9,12],2)); //-1
 console.log(search([-1,0,3,5,9,12],3)); //2
