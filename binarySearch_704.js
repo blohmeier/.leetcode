@@ -17,15 +17,10 @@ Constraints:
 2. -10^4 < nums[i], target < 104
 3. All the integers in nums are unique.
 4. nums is sorted in ascending order.*/
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-var search = function(nums, target) {
+//Effort 1:
+/*var search = function(nums, target) {
     let l = 0;
     let r = nums.length - 1;
-
     while (l <= r) {
         let m = Math.floor((l + r) / 2); // middle of l and r
         if (nums[m] < target) { // #1
@@ -37,4 +32,8 @@ var search = function(nums, target) {
         }
     }
     return -1; // #4
-};
+};*/
+//Effort 2:
+
+console.log(search([-1,0,3,5,9,12],9)); //4
+console.log(search([-1,0,3,5,9,12],2)); //2
