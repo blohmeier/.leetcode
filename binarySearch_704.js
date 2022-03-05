@@ -17,6 +17,7 @@ Constraints:
 2. -10^4 < nums[i], target < 104
 3. All the integers in nums are unique.
 4. nums is sorted in ascending order.*/
+
 //Effort 1:
 /*var search = function(nums, target) {
     let l = 0;
