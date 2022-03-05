@@ -40,10 +40,8 @@ function searchInsert(nums, target) {
 function binarySearch(array, target, l, r) {
     if (l > r) return l;
     let m = Math.floor((l + r)/2);
-
     if (array[m] === target) return m; // found target
-    // search the left side
-    if (array[midPoint] > target) return binarySearch(array, target, start, midPoint - 1);
+    if (array[m] > target) return binarySearch(array, target, l, m - 1); // search left side
     // search the right side
     if (array[midPoint] < target) return binarySearch(array, target, midPoint + 1, end);
 }
