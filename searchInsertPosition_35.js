@@ -1,5 +1,5 @@
 //35. Search Insert Position
-/*Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+/*Given a sorted array of distinct integers (nums) and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 You must write an algorithm with O(log n) runtime complexity.
 
 Example 1:
@@ -19,11 +19,13 @@ Constraints:
 2. -10^4 <= nums[i] AND target <= 10^4
 3. nums contains distinct values sorted in ascending order.*/
 
+//Effort 1:
+//Effort 2: Effort 1 simplified similar to 704. Binary Search
 function searchInsert(nums, target) {
     return binarySearch(nums, target, 0, nums.length - 1);
 };
-function binarySearch(array, target, start, end) {
-    if (start > end) return start;
+function binarySearch(array, target, l, r) {
+    if (l > r) return l;
     const midPoint = Math.floor((start + end)/2);
     // found target
     if (array[midPoint] === target) return midPoint;
