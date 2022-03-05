@@ -19,7 +19,20 @@ Output: 1
 Constraints:
 1. 1 <= bad <= n <= 2^31 - 1*/
 
+/**
+ * Definition for isBadVersion()
+ *
+ * @param {integer} version number
+ * @return {boolean} whether the version is bad
+ * isBadVersion = function(version) {
+ *     ...
+ * };
+ */
 
+/**
+ * @param {number} isBadVersion()
+ * @return {function}
+ */
 var solution = function(isBadVersion) {
     /**
      * @param {integer} n Total versions
