@@ -46,6 +46,18 @@ Constraints:
 
 }*/
 //Effort 3: re-try of Effort 1:
-
+var search = function(nums, target) {
+    let l = 0, r = nums.length - 1;
+    while (l < r) {
+        let m = Math.floor((r + l)/2);
+        if (nums[m] < target) {
+            l = m + 1;
+        } else if (nums[m] > target) {
+            r = m - 1;
+        } else { return m }
+    } return -1
+}
 console.log(search([-1,0,3,5,9,12],9)); //4
-console.log(search([-1,0,3,5,9,12],2)); //2
+console.log(search([-1,0,3,5,9,12],2)); //-1
+console.log(search([-1,0,3,5,9,12],3)); //2
+console.log(search([-1,0,3,5,9,12],9)); //4
