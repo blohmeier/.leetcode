@@ -15,10 +15,9 @@ Input: nums = [1,3,5,6], target = 7
 Output: 4
 
 Constraints:
-1. 1 <= nums.length <= 104
--104 <= nums[i] <= 104
-nums contains distinct values sorted in ascending order.
--104 <= target <= 104*/
+1. 1 <= nums.length <= 10^4
+2. -10^4 <= nums[i] AND target <= 10^4
+3. nums contains distinct values sorted in ascending order.*/
 
 function searchInsert(nums, target) {
     return binarySearch(nums, target, 0, nums.length - 1);
