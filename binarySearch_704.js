@@ -20,7 +20,7 @@ Constraints:
 //Effort 1:
 /*var search = function(nums, target) {
     let l = 0;
-    let r = nums.length - 1; //#1 l and r end nums pointers 
+    let r = nums.length - 1; //#1 l and r nums pointers for 'while'
     while (l <= r) {
         let m = Math.floor((l + r) / 2); // middle of l and r
         if (nums[m] < target) { // #1
@@ -33,8 +33,8 @@ Constraints:
     }
     return -1; // #4
 };*/
-//Effort 2:
-var search = function(nums,target) {
+//Effort 2 - not working:
+/*var search = function(nums,target) {
     let i = 0;
     while (nums[i] !== target) {
 
@@ -43,6 +43,6 @@ var search = function(nums,target) {
         return targetIndex;
     }
 
-}
+}*/
 console.log(search([-1,0,3,5,9,12],9)); //4
 console.log(search([-1,0,3,5,9,12],2)); //2
