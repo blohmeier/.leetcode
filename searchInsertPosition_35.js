@@ -34,7 +34,7 @@ function binarySearch(array, target, start, end) {
     if (array[midPoint] < target) return binarySearch(array, target, midPoint + 1, end);
 }*/
 //Effort 2: Effort 1 simplified similar to 704. Binary Search
-function searchInsert(nums, target) {
+/*function searchInsert(nums, target) {
     return binarySearch(nums, target, 0, nums.length - 1);
 };
 function binarySearch(array, target, l, r) {
@@ -43,7 +43,7 @@ function binarySearch(array, target, l, r) {
     if (array[m] === target) return m;
     if (array[m] > target) return binarySearch(array, target, l, m - 1);
     if (array[m] < target) return binarySearch(array, target, m + 1, r);
-}
+}*/
 console.log(searchInsert([1,3,5,6],5)); //2
 console.log(searchInsert([1,3,5,6],2)); //1
 console.log(searchInsert([1,3,5,6],7)); //4
