@@ -34,11 +34,11 @@ function sortedSquares(nums) {
     /*#2: First sorting step:
         if num[l] > @[r],
             - put the square of nums at the index of one to the right of the current 'l' pointer ...
-            - in the result matrix at one to the left of the current 'sorting' pointer.
-
-     */
+            - in the result matrix at one to the left of the current 'sorting' pointer.*/
         } else {
             result[p--] = nums[r--] ** 2;
+            /*#3: Second sorting step:
+            */
         }
     }
     return result;
