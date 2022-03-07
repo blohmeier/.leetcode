@@ -69,23 +69,22 @@ Could you do it in-place with O(1) extra space?
 //Above not working. Attempt 4:
 var rotate = function(nums, k) {
 
-    k = k % nums.length;
+    k = k%nums.length
 
-    var len = nums.length - 1;
+    var len  =nums.length - 1;
     reverse(nums, 0, len - k);
-    reverse(nums, len - k + 1 , `len`);
-    reverse(nums, 0 ,`len`);
+    reverse(nums, len - k + 1 , len);
+    reverse(nums, 0 ,len);
 
 
-    function reverse(arr, l, r){
+    function reverse(arr,l, r){
         while(l <  r){
             [ arr[l], arr[r] ] = [ arr[r] , arr[l] ];
             l++;
-            r--;
+            r--
         }
     }
-    return rotate;
-};
+}
 console.log(rotate([1,2,3,4,5,6,7], 3)); // [5,6,7,1,2,3,4]
 console.log(rotate([-1,-100,3,99], 2)); // [3,99,-1,-100]
 
