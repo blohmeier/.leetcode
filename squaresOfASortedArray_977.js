@@ -24,8 +24,8 @@ function sortedSquares(nums) {
     let result = [], l = 0, r = nums.length - 1, p = r;
     //#1: set vars: 'result' (empty array) and 3 'pointers':
     //  left (l) = 0.
-    //  right (r - nums length
-    //  sorting = p - set to r.
+    //  right (r) = nums length.
+    //  sorting (p) = starts out as equal to r.
     while (l <= r) {
         if (nums[l] ** 2 > nums[r] ** 2) {
             result[p--] = nums[l++] ** 2;
