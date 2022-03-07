@@ -19,32 +19,33 @@ nums is sorted in non-decreasing order.
 Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
  */
 
-//Solution 1
-function sortedSquares(nums) {
+//Solution 1 - detailed documentation 7Mar
+/*function sortedSquares(nums) {
     let result = [], l = 0, r = nums.length - 1, p = r;
-    /*#1: set vars:
+    /!*#1: set vars:
         'result' (empty array).
         3 'pointers':
             left (l) = 0.
             right (r) = nums length.
-            sorting (p) = starts as equal to r.*/
+            sorting (p) = starts as equal to r.*!/
     while (l <= r) {
         if (nums[l] ** 2 > nums[r] ** 2) {
             result[p--] = nums[l++] ** 2;
-    /*#2: First sorting step:
+    /!*#2: First sorting step:
         if num[l] > @[r],
             - put square of nums (at index +1 of current 'l') ...
-            - in the result matrix at one to the left of the current 'sorting' pointer.*/
+            - in the result matrix at one to the left of the current 'sorting' pointer.*!/
         } else {
             result[p--] = nums[r--] ** 2;
-    /*#3: Second sorting step:
+    /!*#3: Second sorting step:
         Otherwise,
             - put square of nums (at index -1 of current 'r') ...
-            - in the result matrix at one to the left of the current 'sorting' pointer.*/
+            - in the result matrix at one to the left of the current 'sorting' pointer.*!/
         }
     }
     return result;
-}
+}*/
+
 //Solution 2
 /*function sortedSquares(nums) {
     let length = nums.length,
