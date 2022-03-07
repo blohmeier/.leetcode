@@ -34,7 +34,6 @@ function sortedSquares(nums) {
     }
     return result;
 }
-
 //Solution 2
 /*function sortedSquares(nums) {
     let length = nums.length,
