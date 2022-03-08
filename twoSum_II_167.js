@@ -38,13 +38,10 @@ Constraints:
         }
     }
     return [lo+1, hi+1]
-}
-console.log(twoSum([2,7,11,15],9));
-console.log(twoSum([2,3,4], 6));
-console.log(twoSum([-1,0], -1));*/
+}*/
 
-//Effort 2
-var twoSum = function(nums, target) {
+//Effort 2 - leetcode entry.
+/*var twoSum = function(nums, target) {
     //nums = nums.sort();
     let lo = 0, hi = nums.length;
     while (lo < hi) {
@@ -56,7 +53,8 @@ var twoSum = function(nums, target) {
             hi--;
         }
     }
-}
+}*/
+
 console.log(twoSum([2,7,11,15],9));
 console.log(twoSum([2,3,4], 6));
 console.log(twoSum([-1,0], -1));
