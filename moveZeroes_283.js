@@ -15,7 +15,7 @@ Constraints:
 
 Follow up: Could you minimize the total number of operations done?*/
 
-// Effort 1: 124ms
+//Effort 1: 124ms
 /*function moveZeroes(nums) {
     var pos = 0;
     for (var i = 0; i < nums.length; i++) {
@@ -28,7 +28,8 @@ Follow up: Could you minimize the total number of operations done?*/
     }
     return nums;
 }*/
-// //Second Effort: 83ms.
+
+// Effort: 83ms.
 function moveZeroes(nums) {
     let pointer = 0
     for (let i in nums){
