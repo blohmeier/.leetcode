@@ -1,4 +1,4 @@
-// // 283. Move Zeroes
+// 283. Move Zeroes
 // Effort 1: 124ms
 /*function moveZeroes(nums) {
     var pos = 0;
