@@ -29,8 +29,8 @@ Follow up: Could you minimize the total number of operations done?*/
     return nums;
 }*/
 
-// Effort: 83ms.
-function moveZeroes(nums) {
+//Effort 2: 143ms - entered in leetcode.
+/*function moveZeroes(nums) {
     let pointer = 0
     for (let i in nums){
         console.log("before if, pointer = " + pointer);
@@ -48,9 +48,9 @@ function moveZeroes(nums) {
         console.log(nums);
     }
     return nums
-}
-console.log(moveZeroes([0,1,0,3,12]));
-//Solution 3: 94ms.
+}*/
+
+//Effort 3: 94ms.
 // function moveZeroes_283(nums) {
 //     let count=0;
 //     for(let i=0;i<nums.length;i++){
