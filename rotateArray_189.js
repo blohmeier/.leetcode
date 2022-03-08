@@ -45,22 +45,22 @@ Could you do it in-place with O(1) extra space?
 // };
 //
 // console.log(rotate([1,2,3,4,5,6,7], 3));
-// Above not working. Attempt 2:
-// function rotate(nums, k) {
-//     k %= nums.length;
-//     let temp,
-//         previous;
-//     for (i = 0; i < k; i++) {
-//         previous = nums[nums.length - 1];
-//         for (j = 0; j < nums.length; j++) {
-//             temp = nums[j];
-//             nums[j] = previous;
-//             previous = temp;
-//         }
-//     }
-// }
-// console.log(rotate([1,2,3,4,5,6,7], 3)); //
-//Above not working.
+// Above not working.
+
+// Attempt 2 - not working:
+/*function rotate(nums, k) {
+    k %= nums.length;
+    let temp,
+        previous;
+    for (i = 0; i < k; i++) {
+        previous = nums[nums.length - 1];
+        for (j = 0; j < nums.length; j++) {
+            temp = nums[j];
+            nums[j] = previous;
+            previous = temp;
+        }
+    }
+}*/
 
 // Attempt 3 - not working:
 /*function rotate (nums, k) {
