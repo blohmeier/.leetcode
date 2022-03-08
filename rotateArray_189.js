@@ -24,28 +24,26 @@ Constraints:
 
 Follow up:
 Try to come up with as many solutions as you can. There are at least three different ways to solve this problem.
-Could you do it in-place with O(1) extra space?
- */
+Could you do it in-place with O(1) extra space?*/
 
-// var rotate = function(nums, k) {
-//     k %= nums.length;
-//
-//     let reverse = function(i, j){
-//         while(i < j){
-//             let temp = nums[i];
-//             nums[i] = nums[j];
-//             nums[j] = temp;
-//             i++;
-//             j--;
-//         }
-//     }
-//     reverse(0, nums.length - 1);
-//     reverse(0, k - 1);
-//     reverse(k, nums.length - 1);
-// };
-//
-// console.log(rotate([1,2,3,4,5,6,7], 3));
-// Above not working.
+//Attempt 1 -  not working:
+/*var rotate = function(nums, k) {
+    k %= nums.length;
+
+    let reverse = function(i, j){
+        while(i < j){
+            let temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+            i++;
+            j--;
+        }
+    }
+    reverse(0, nums.length - 1);
+    reverse(0, k - 1);
+    reverse(k, nums.length - 1);
+};*/
+
 
 // Attempt 2 - not working:
 /*function rotate(nums, k) {
