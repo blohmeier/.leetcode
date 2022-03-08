@@ -67,7 +67,7 @@ Could you do it in-place with O(1) extra space?
 // console.log(rotate([1,2,3,4,5,6,7], 3)); //
 //console.log(rotate());
 //Above not working. Attempt 4 - works in leetcode but no output in IntelliJ:
-var rotate = function(nums, k) {
+/*var rotate = function(nums, k) {
 
     k = k%nums.length
 
@@ -84,7 +84,7 @@ var rotate = function(nums, k) {
             r--
         }
     }
-}
+}*/
 console.log(rotate([1,2,3,4,5,6,7], 3)); // [5,6,7,1,2,3,4]
 console.log(rotate([-1,-100,3,99], 2)); // [3,99,-1,-100]
 
