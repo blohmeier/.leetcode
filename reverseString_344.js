@@ -60,7 +60,7 @@ function reverseString(s) {
 console.log(reverseString(["h","e","l","l","o"]));
 console.log(reverseString(["H","a","n","n","a","h"]));
 
-//#2B - 2 pointer technique with recursion
+//#2B - 2 pointer technique with recursion - works in leetcode; no output in IntelliJ.
 //Time complexity: O(N)
 //Space complexity: O(N)
 /*
