@@ -63,6 +63,7 @@ console.log(reverseString(["H","a","n","n","a","h"]));
 //#2B - 2 pointer technique with recursion
 //Time complexity: O(N)
 //Space complexity: O(N)
+/*
 function reverseString (s) {
     reverse(0, s.length - 1);
     function reverse(i, j, k = 0) {
@@ -76,4 +77,4 @@ function reverseString (s) {
     }
 };
 console.log(reverseString('hello'));
-console.log(reverseString("Hannah"));
+console.log(reverseString("Hannah"));*/
