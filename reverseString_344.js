@@ -23,7 +23,7 @@ s[i] is a printable ascii character.*/
 console.log(reverseString(["h","e","l","l","o"]));
 console.log(reverseString(["H","a","n","n","a","h"]));*/
 
-//#2A
+//#2A - BEST CHOICE???
 /*function reverseString(s) {
     var newString = "";
     for (var i = s.length - 1; i >= 0; i--) {
