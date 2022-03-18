@@ -23,7 +23,7 @@ s[i] is a printable ascii character.*/
 console.log(reverseString(["h","e","l","l","o"]));
 console.log(reverseString(["H","a","n","n","a","h"]));*/
 
-//#2A - BEST CHOICE??? BUT, doesn't output as an array? NOT ACCEPTED IN LEETCODE.
+//#2A - NOT BEST CHOICE ... doesn't output as an array ... NOT ACCEPTED IN LEETCODE.
 function reverseString(s) {
     var newString = "";
     for (var i = s.length - 1; i >= 0; i--) {
