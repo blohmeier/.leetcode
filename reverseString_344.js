@@ -51,19 +51,19 @@ console.log(reverseString(["H","a","n","n","a","h"]));*/
 //#1B - 2 pointer technique with iteration
 //Time complexity: O(N)
 //Space complexity: O(1)
-/*function reverseString(s) {
+function reverseString(s) {
     for (let [a, b] = [0, s.length - 1]; a < b; a++, b--) {
         [s[a], s[b]] = [s[b], s[a]]
     }
     return s;
 };
 console.log(reverseString(["h","e","l","l","o"]));
-console.log(reverseString(["H","a","n","n","a","h"]));*/
+console.log(reverseString(["H","a","n","n","a","h"]));
 
 //#2B - 2 pointer technique with recursion
 //Time complexity: O(N)
 //Space complexity: O(N)
-/*function reverseString (s) {
+function reverseString (s) {
     reverse(0, s.length - 1);
     function reverse(i, j, k = 0) {
         if (i >= j) return;
@@ -76,4 +76,4 @@ console.log(reverseString(["H","a","n","n","a","h"]));*/
     }
 };
 console.log(reverseString('hello'));
-console.log(reverseString("Hannah"));*/
+console.log(reverseString("Hannah"));
