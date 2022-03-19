@@ -67,9 +67,9 @@ var search = function(nums, target) {
         let m = Math.floor((l + r) / 2); // middle of l and r
         if (nums[m] < target) { // #1
             l = m + 1;
-            console.log("start of #1 loop");
-            console.log("middle nums value is: " + m);
-            console.log("middle nums value is less than target, and its index is: " + nums[m]);
+            console.log("Loop#1");
+            console.log("m: " + m);
+            console.log("nums[m]: " + nums[m]);
             console.log("left is: " + l);
             console.log("right is: " + r);
             console.log("length is: " + nums.length);
@@ -88,6 +88,6 @@ var search = function(nums, target) {
     return -1; // #4
 };
 console.log(search([-1,0,3,5,9,12],9)); //4
+/*
 console.log(search([-1,0,3,5,9,12],2)); //-1
-console.log(search([-1,0,3,5,9,12],3)); //2
-console.log(search([-1,0,3,5,9,12],9)); //4
+console.log(search([-1,0,3,5,9,12],3)); //2*/
