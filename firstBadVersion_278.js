@@ -18,37 +18,16 @@ Output: 1
 
 Constraints:
 1. 1 <= bad <= n <= 2^31 - 1*/
-
-/**
- * Definition for isBadVersion()
- *
- * @param {integer} version number
- * @return {boolean} whether the version is bad
- * isBadVersion = function(version) {
- *     ...
- * };
- */
-
-/**
- * @param {number} isBadVersion()
- * @return {function}
- */
 var solution = function(isBadVersion) {
-    /**
-     * @param {integer} n Total versions
-     * @return {integer} The first bad version
-     */
     return function(n) {
-        let left = 1,
-            right = n,
-            middle;
-        while (left < right) {
+        let l=1, r=n, m;
+        while (l<r) {
+            m = ~~((l+r)/2);
             //middle = Math.floor((left + right)/2);
-            middle = ~~((left + right)/2);
-            if (isBadVersion(middle)) right = middle;
-            else left = middle + 1
+            if (isBadVersion(m)) r=m;
+            else l=m+1
         };
-        return left;
+        return l;
     };
 };
 console.log(solution(5));
