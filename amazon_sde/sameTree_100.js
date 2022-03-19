@@ -27,9 +27,7 @@ The number of nodes in both trees is in the range [0, 100].
     if (!p || !q || p.val !== q.val) return false;
     return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 };
-console.log(isSameTree([1,2,3],[1,2,3]));
-console.log(isSameTree([1,2],[1,null,2]));
-console.log(isSameTree([1,2,1],[1,1,2]));*/
+*/
 //#2: Works in leetcode and here.
 var isSameTree = function(p, q) {
     return JSON.stringify(p)===JSON.stringify(q)
