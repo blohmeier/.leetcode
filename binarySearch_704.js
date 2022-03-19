@@ -66,28 +66,27 @@ var search = function(nums, target) {
     while (l <= r) {
         let m = Math.floor((l + r) / 2); // middle of l and r
         if (nums[m] < target) { // #1
-            l = m + 1;
-            console.log("Loop#1");
+            console.log("Loop#1: for nums[m] < target");
+            console.log("Old l: " + l);
             console.log("m: " + m);
             console.log("nums[m]: " + nums[m]);
-            console.log("left is: " + l);
-            console.log("right is: " + r);
-            console.log("length is: " + nums.length);
+            l = m + 1;
+            console.log("New l: " + l);
+            console.log("r: " + r);
         } else if (nums[m] > target) { // #2
+            console.log("Loop#2: for nums[m] > target");
+            console.log("Old r: " + r);
+            console.log("m: " + m);
+            console.log("nums[m]: " + nums[m]);
+            console.log("l: " + l);
             r = m - 1;
-            console.log("start of #2 loop");
-            console.log("middle nums value is: " + m);
-            console.log("middle nums value is greater than target, and is: " + nums[m]);
-            console.log("left is: " + l);
-            console.log("right is: " + r);
-            console.log("length is: " + nums.length);
+            console.log("New r: " + r)
         } else { // #3
             return m;
         }
     }
     return -1; // #4
 };
-console.log(search([-1,0,3,5,9,12],9)); //4
-/*
+/*console.log(search([-1,0,3,5,9,12],9));*/ //4
 console.log(search([-1,0,3,5,9,12],2)); //-1
-console.log(search([-1,0,3,5,9,12],3)); //2*/
+/*console.log(search([-1,0,3,5,9,12],3)); //2*/
