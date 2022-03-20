@@ -66,7 +66,8 @@ Could you do it in-place with O(1) extra space?*/
 }*/
 
 // Attempt 3 - detailed explain of Attempt 2:
-var rotate = function(nums, k, callback) {
+var rotate = function(nums, k) {
+    var resultz2 = 0;
 
     k = k % nums.length
     console.log("k is: " + k);
@@ -90,10 +91,13 @@ var rotate = function(nums, k, callback) {
             console.log("r after decrementing is " + r);
             console.log("array is: " + arr);
         }
-        /*return arr;*/
+        resultz2 = arr;
+        console.log("resultz2 within reverse function is: " + resultz2);
+        return resultz2;
     }
+    console.log("resultz2 outside of reverse function is: " + resultz2);
+    return resultz2;
 }
 
 console.log(rotate([1,2,3,4,5,6,7], 3)); // [5,6,7,1,2,3,4]
-/*
-console.log(rotate([-1,-100,3,99], 2)); // [3,99,-1,-100]*/
+console.log(rotate([-1,-100,3,99], 2)); // [3,99,-1,-100]
