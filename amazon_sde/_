@@ -93,3 +93,6 @@ for f in *.js; do echo mv "$f" "${f/_*_/_}"; done
 SOLUTION:
 https://www.computerhope.com/unix/rename.htm
 rename -n 's/(\D+)(\_)(\d+)(\.js)/$3$2$1$4/' *.js
+
+Attempt to re-create the above with 'for' loop:
+
