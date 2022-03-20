@@ -46,7 +46,7 @@ Follow up: Squaring each element and sorting the new array is very trivial, coul
     return result;
 }*/
 
-//Solution 2: Solution 1 abbreviated:
+//Solution 2: Solution 1 with additional description and console.logs:
 function sortedSquares(nums) {
     let result = [], l = 0, r = nums.length - 1, p = r, i=1;
     while (l <= r) {
