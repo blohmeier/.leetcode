@@ -32,7 +32,7 @@ Follow up: Squaring each element and sorting the new array is very trivial, coul
         if (nums[l] ** 2 > nums[r] ** 2) {
             result[p--] = nums[l++] ** 2;
     /!*#2: First sorting step:
-        if num[l] > @[r],
+        if num[l]^2 > @[r]^2,
             - put square of nums (at index +1 of current 'l') ...
             - in the result matrix at one to the left of the current 'sorting' pointer.*!/
         } else {
@@ -45,6 +45,29 @@ Follow up: Squaring each element and sorting the new array is very trivial, coul
     }
     return result;
 }*/
+
+//Solution 2: Solution 1 abbreviated:
+function sortedSquares(nums) {
+    let result = [], l = 0, r = nums.length - 1, p = r;
+    while (l <= r) {
+        if (nums[l] ** 2 > nums[r] ** 2) {
+            result[p--] = nums[l++] ** 2;
+            console.log("l++ is: " + l++);
+            console.log("p-- is: " + p--);
+            console.log(result);
+        } else {
+            console.log("p is: " + p);
+            console.log("r is: " + r);
+            console.log(result);
+            result[p--] = nums[r--] ** 2;
+            console.log("r is now: " + r);
+            console.log("r-- is: " + r--);
+            console.log("p-- is: " + p--);
+            console.log(("result is: ") + (result));
+        }
+    }
+    return result;
+}
 
 //Solution 2
 /*function sortedSquares(nums) {
@@ -68,4 +91,5 @@ Follow up: Squaring each element and sorting the new array is very trivial, coul
     // Space: O(n)
 }*/
 console.log(sortedSquares([-4,-1,0,3,10])); //[0,1,9,16,100]
-console.log(sortedSquares([-7,-3,2,3,11])); //[4,9,9,49,121]
+/*
+console.log(sortedSquares([-7,-3,2,3,11])); //[4,9,9,49,121]*/

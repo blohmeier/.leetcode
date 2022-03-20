@@ -127,9 +127,15 @@ if [[ $img =~ $re ]]; then
 fi
 
 NEXT ATTEMPT: https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html
-re='^([a-zA-Z]+)_([0-9])+(\.js)$'
+re='^(.*)(\.js)$'
 if [[ $img =~ $re ]]; then
-    newimg=${BASH_REMATCH[2]}_${BASH_REMATCH[1]}
+    newimg=${BASH_REMATCH[2]}${BASH_REMATCH[1]}
     echo convert "$img" ... "$newimg"
 fi
+
+for f in *.js ; do
+    if [[ "$f" =~  ^(.*)(\..*)$ ]]; then
+        echo mv "$f" "${BASH_REMATCH[2]}${BASH_REMATCH[1]}"
+    fi
+done
 
