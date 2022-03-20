@@ -48,29 +48,29 @@ Follow up: Squaring each element and sorting the new array is very trivial, coul
 
 //Solution 2: Solution 1 abbreviated:
 function sortedSquares(nums) {
-    let result = [], l = 0, r = nums.length - 1, p = r;
+    let result = [], l = 0, r = nums.length - 1, p = r, i=1;
     while (l <= r) {
         if (nums[l] ** 2 > nums[r] ** 2) {
-            console.log("nums[l]^2 is greater than @r^2");
+            console.log("round " + i + ". nums[l]^2 is greater than @r^2 because " + nums[l] ** 2 + " > " +  nums[r] ** 2);
             console.log("p is: " + p);
             console.log("l is: " + l);
+            console.log("We will put nums[r]^2 (at index l = " + l + ") in the result array (at index p = " + p + ") and increment l but decrement p.");
             result[p--] = nums[l++] ** 2;
             console.log("l is now: " + l);
-            console.log("l++ is: " + l++);
-            console.log("p-- is: " + p--);
+            console.log("p is now: " + p);
             console.log(result);
         } else {
-            console.log("nums[l]^2 is less than @r^2");
+            console.log("round " + i + ". nums[l]^2 is less than @r^2 because " + nums[l] ** 2 + " < " +  nums[r] ** 2);
             console.log("p is: " + p);
             console.log("r is: " + r);
             console.log(result);
+            console.log("We will put nums[r]^2 (at index r = " + r + ") in the result array (at index p = " + p + ") and decrement them both.");
             result[p--] = nums[r--] ** 2;
-            console.log("We just put nums[r]^2 (at index 4) in the result array (at index 4) and decremented both vars.");
             console.log("r is now: " + r);
-            console.log("r-- is: " + r--);
-            console.log("p-- is: " + p--);
+            console.log("p is now: " + p);
             console.log(("result is: ") + (result));
         }
+        i++;
     }
     return result;
 }
