@@ -80,24 +80,26 @@ var rotate = function(nums, k) {
     reverse(nums, 0 ,len);
 
 
-    function reverse(arr,l, r){
-        while(l <  r){
+    function reverse(arr,l, r, i = 1){
+        while(l < r){
+            console.log("loop: " + i);
             [ arr[l], arr[r] ] = [ arr[r] , arr[l] ];
-            console.log("l before incrementing is " + l);
+            console.log("l before increment is " + l);
             l++;
-            console.log("l after  incrementing is " + l);
-            console.log("r before decrementing is " + r);
+            console.log("l after increment is " + l);
+            console.log("r before decrement is " + r);
             r--
-            console.log("r after decrementing is " + r);
+            console.log("r after decrement is " + r);
             console.log("array is: " + arr);
+            i++;
         }
         resultz2 = arr;
-        console.log("resultz2 within reverse function is: " + resultz2);
-        return resultz2;
+        /*console.log("resultz2 within reverse function is: " + resultz2);*/
+        /*return resultz2;*/
     }
-    console.log("resultz2 outside of reverse function is: " + resultz2);
+    /*console.log("resultz2 outside of reverse function is: " + resultz2);*/
     return resultz2;
 }
 
 console.log(rotate([1,2,3,4,5,6,7], 3)); // [5,6,7,1,2,3,4]
-console.log(rotate([-1,-100,3,99], 2)); // [3,99,-1,-100]
+/*console.log(rotate([-1,-100,3,99], 2)); // [3,99,-1,-100]*/
