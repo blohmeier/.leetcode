@@ -51,15 +51,21 @@ function sortedSquares(nums) {
     let result = [], l = 0, r = nums.length - 1, p = r;
     while (l <= r) {
         if (nums[l] ** 2 > nums[r] ** 2) {
+            console.log("nums[l]^2 is greater than @r^2");
+            console.log("p is: " + p);
+            console.log("l is: " + l);
             result[p--] = nums[l++] ** 2;
+            console.log("l is now: " + l);
             console.log("l++ is: " + l++);
             console.log("p-- is: " + p--);
             console.log(result);
         } else {
+            console.log("nums[l]^2 is less than @r^2");
             console.log("p is: " + p);
             console.log("r is: " + r);
             console.log(result);
             result[p--] = nums[r--] ** 2;
+            console.log("We just put nums[r]^2 (at index 4) in the result array (at index 4) and decremented both vars.");
             console.log("r is now: " + r);
             console.log("r-- is: " + r--);
             console.log("p-- is: " + p--);
