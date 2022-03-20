@@ -1,6 +1,4 @@
-# Leetcode Practice 6 Feb
-
-## 977. Squares of a Sorted Array
+# 977. Squares of a Sorted Array
 *Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.*
 
 **Example 1:**
@@ -18,6 +16,6 @@ Output: [4,9,9,49,121]
 
 **Constraints:**
 
-- 1 <= nums.length <= 104
-- -104 <= nums[i] <= 104
+- 1 <= nums.length <= 10<sup>4</sup>
+- -10<sup>4</sup> <= nums[i] <= 10<sup>4</sup>
 - nums is sorted in non-decreasing order.
