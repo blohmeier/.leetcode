@@ -66,12 +66,14 @@ Could you do it in-place with O(1) extra space?*/
 }*/
 
 // Attempt 3 - detailed explain of Attempt 2:
-var rotate = function(nums, k) {
+var rotate = function(nums, k, callback) {
 
     k = k % nums.length
-    console.log(k);
+    console.log("k is: " + k);
 
     var len = nums.length - 1;
+    /*var arr = [];*/
+
     reverse(nums, 0, len - k);
     reverse(nums, len - k + 1 , len);
     reverse(nums, 0 ,len);
@@ -80,11 +82,18 @@ var rotate = function(nums, k) {
     function reverse(arr,l, r){
         while(l <  r){
             [ arr[l], arr[r] ] = [ arr[r] , arr[l] ];
+            console.log("l before incrementing is " + l);
             l++;
+            console.log("l after  incrementing is " + l);
+            console.log("r before decrementing is " + r);
             r--
+            console.log("r after decrementing is " + r);
+            console.log("array is: " + arr);
         }
+        /*return arr;*/
     }
 }
 
 console.log(rotate([1,2,3,4,5,6,7], 3)); // [5,6,7,1,2,3,4]
-console.log(rotate([-1,-100,3,99], 2)); // [3,99,-1,-100]
+/*
+console.log(rotate([-1,-100,3,99], 2)); // [3,99,-1,-100]*/
