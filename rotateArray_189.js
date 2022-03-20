@@ -46,7 +46,7 @@ Could you do it in-place with O(1) extra space?*/
 
 
 // Attempt 2 - works in leetcode but no output in IntelliJ:
-var rotate = function(nums, k) {
+/*var rotate = function(nums, k) {
 
     k = k % nums.length
 
@@ -63,7 +63,28 @@ var rotate = function(nums, k) {
             r--
         }
     }
+}*/
+
+// Attempt 3 - detailed explain of Attempt 2:
+var rotate = function(nums, k) {
+
+    k = k % nums.length
+    console.log(k);
+
+    var len = nums.length - 1;
+    reverse(nums, 0, len - k);
+    reverse(nums, len - k + 1 , len);
+    reverse(nums, 0 ,len);
+
+
+    function reverse(arr,l, r){
+        while(l <  r){
+            [ arr[l], arr[r] ] = [ arr[r] , arr[l] ];
+            l++;
+            r--
+        }
+    }
 }
+
 console.log(rotate([1,2,3,4,5,6,7], 3)); // [5,6,7,1,2,3,4]
 console.log(rotate([-1,-100,3,99], 2)); // [3,99,-1,-100]
-
