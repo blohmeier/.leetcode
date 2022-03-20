@@ -45,14 +45,12 @@ Could you do it in-place with O(1) extra space?*/
 };*/
 
 
-// Attempt 2 - not working:
+// Attempt 2 - works in leetcode but no output in IntelliJ:
+var rotate = function(nums, k) {
 
-//Attempt 4 - works in leetcode but no output in IntelliJ:
-/*var rotate = function(nums, k) {
+    k = k % nums.length
 
-    k = k%nums.length
-
-    var len  =nums.length - 1;
+    var len = nums.length - 1;
     reverse(nums, 0, len - k);
     reverse(nums, len - k + 1 , len);
     reverse(nums, 0 ,len);
@@ -65,7 +63,7 @@ Could you do it in-place with O(1) extra space?*/
             r--
         }
     }
-}*/
+}
 console.log(rotate([1,2,3,4,5,6,7], 3)); // [5,6,7,1,2,3,4]
 console.log(rotate([-1,-100,3,99], 2)); // [3,99,-1,-100]
 
