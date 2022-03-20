@@ -60,11 +60,6 @@ var rotate = function(nums, k) {
     }
 }*/
 
-// Attempt 3 - not working:
-/*function rotate (nums, k) {
-    return( nums.splice(0,0,...nums.splice(nums.length-k, k)))
-}*/
-
 //Attempt 4 - works in leetcode but no output in IntelliJ:
 /*var rotate = function(nums, k) {
 
