@@ -95,4 +95,18 @@ https://www.computerhope.com/unix/rename.htm
 rename -n 's/(\D+)(\_)(\d+)(\.js)/$3$2$1$4/' *.js
 
 Attempt to re-create the above with 'for' loop:
+for f in *.js ; do
+    if [[ "$f" =~  ^(.*)_(.*)$ ]]; then
+        echo mv "$f" "${BASH_REMATCH[2]}_${BASH_REMATCH[1]}"
+    fi
+done
+FAILED! HAD TO RECOVER:
+git reset --hard
 
+SECOND TRY ... SOURCE:
+https://unix.stackexchange.com/questions/444825/move-last-part-of-filename-to-front
+for f in *.js ; do
+    if [[ "$f" =~  ^(.*)_(.*)(\..*)$ ]]; then
+        echo mv "$f" "${BASH_REMATCH[2]}_${BASH_REMATCH[1]}${BASH_REMATCH[3]}"
+    fi
+done
