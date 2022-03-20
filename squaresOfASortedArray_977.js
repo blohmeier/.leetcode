@@ -60,7 +60,7 @@ function sortedSquares(nums) {
             console.log("p is now: " + p);
             console.log(result);
         } else {
-            console.log("round " + i + ". nums[l]^2 is less than @r^2 because " + nums[l] ** 2 + " < " +  nums[r] ** 2);
+            console.log("round " + i + ". nums[l]^2 is less than (OR EQUAL TO) @r^2 because " + nums[l] ** 2 + " < " +  nums[r] ** 2);
             console.log("p is: " + p);
             console.log("r is: " + r);
             console.log(result);
