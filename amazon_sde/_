@@ -120,4 +120,12 @@ done
 
 NEW ATTEMPT:
 https://superuser.com/questions/1622109/shell-how-to-rename-files-in-the-midle-of-file-name
+re='^([a-zA-Z]+)(_+)([0-9])+(\.js)$'
+if [[ $img =~ $re ]]; then
+    newimg=${BASH_REMATCH[2]}_${BASH_REMATCH[1]}
+    echo convert "$img" ... "$newimg"
+fi
+
+NEXT ATTEMPT: https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html
+
 
