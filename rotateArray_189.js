@@ -27,7 +27,7 @@ Try to come up with as many solutions as you can. There are at least three diffe
 Could you do it in-place with O(1) extra space?*/
 
 //Attempt 1 - works in leetcode, not in IntelliJ:
-var rotate = function(nums, k) {
+/*var rotate = function(nums, k) {
     k %= nums.length;
 
     let reverse = function(i, j){
@@ -42,23 +42,10 @@ var rotate = function(nums, k) {
     reverse(0, nums.length - 1);
     reverse(0, k - 1);
     reverse(k, nums.length - 1);
-};
+};*/
 
 
 // Attempt 2 - not working:
-/*function rotate(nums, k) {
-    k %= nums.length;
-    let temp,
-        previous;
-    for (i = 0; i < k; i++) {
-        previous = nums[nums.length - 1];
-        for (j = 0; j < nums.length; j++) {
-            temp = nums[j];
-            nums[j] = previous;
-            previous = temp;
-        }
-    }
-}*/
 
 //Attempt 4 - works in leetcode but no output in IntelliJ:
 /*var rotate = function(nums, k) {
