@@ -15,8 +15,8 @@ Constraints:
 
 Follow up: Could you minimize the total number of operations done?*/
 
-//Effort 1: 124ms
-/*function moveZeroes(nums) {
+//Effort 1: 124ms - 92ms on 21Mar
+function moveZeroes(nums) {
     var pos = 0;
     for (var i = 0; i < nums.length; i++) {
         if (nums[i] !== 0) {
@@ -27,7 +27,7 @@ Follow up: Could you minimize the total number of operations done?*/
         nums[i] = 0;
     }
     return nums;
-}*/
+}
 
 //Effort 2: 143ms - entered in leetcode.
 /*function moveZeroes(nums) {
@@ -50,8 +50,8 @@ Follow up: Could you minimize the total number of operations done?*/
     return nums
 }*/
 
-//Effort 3: 94ms.
-/*function moveZeroes_283(nums) {
+//Effort 3: 94ms, 96ms.
+function moveZeroes(nums) {
     let count=0;
     for(let i=0;i<nums.length;i++){
         if(count===nums.length){
@@ -64,6 +64,6 @@ Follow up: Could you minimize the total number of operations done?*/
         }
     }
     return nums
-}*/
+}
 
 // console.log(moveZeroes([0,1,0,3,12]));
