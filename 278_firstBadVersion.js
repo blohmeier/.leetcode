@@ -19,11 +19,14 @@ Output: 1
 Constraints:
 1. 1 <= bad <= n <= 2^31 - 1*/
 var solution = function(isBadVersion) {
+    /**
+     * @param {integer} n Total versions
+     * @return {integer} The first bad version
+     */
     return function(n) {
         let l=1, r=n, m;
         while (l<r) {
-            m = ~~((l+r)/2);
-            //middle = Math.floor((left + right)/2);
+            m = ~~((l+r)/2); //m = Math.floor((left + right)/2);
             if (isBadVersion(m)) r=m;
             else l=m+1
         };
